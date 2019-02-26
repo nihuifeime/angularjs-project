@@ -1,0 +1,116 @@
+<div id="ksh-chart">
+	<div class="ksh-chart-title">
+		<button>太 原 市 安 全 生 产 风 险 图 表 分 析</button>
+	</div>
+	<div class="ksh-chart-serch">
+		<div>
+			<label>选择地区</label> 
+			<select ng-model="select">
+				<option>请选择</option>
+				<option>太原市</option>
+				<option>迎泽区</option>
+				<option>小店区</option>
+			</select> 
+			<label>选择行业</label> <select></select> 
+			<label>企业搜索</label> <input type="text"> 
+			<span>*满足任意一条即可生成</span>
+			<input type="button" value="生 成" ng-click="serch()">
+		</div>
+	</div>
+	<div class="ksh-chart-chart">
+		<div class="ksh-chart-pie">
+			<div id="ksh-chart-pieleft">
+				
+			</div>
+			<div id="ksh-chart-pieright">
+				
+			</div>
+		</div>
+		<div class="ksh-chart-bar" id="ksh-chart-bar">
+			
+		</div>
+		<div class="ksh-chart-line" id="ksh-chart-line">
+			
+		</div>
+	</div>
+</div>
+
+<style>
+	#ksh-chart{
+		width: 100%;
+		height: 100%;
+	}
+	#ksh-chart .ksh-chart-title{
+		width: 100%;
+		height: 5%;
+	}
+	#ksh-chart .ksh-chart-title button{
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		font-size: 20px;
+		font-weight: 600;
+		border-bottom: 1px solid #d4d4d7;
+	}
+	
+	#ksh-chart .ksh-chart-serch{
+		width: 100%;
+		height: 10%;
+	}
+	#ksh-chart .ksh-chart-serch div{
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		text-align: center;
+		position: relative;
+		top: 15%;
+	}
+	#ksh-chart .ksh-chart-serch div label{
+		margin-left: 1%;
+		font-size: 15px;
+	}
+	#ksh-chart .ksh-chart-serch div input,#ksh-chart .ksh-chart-serch div select{
+		width: 10%;
+		height: 30px;
+	}
+	#ksh-chart .ksh-chart-serch div span{
+		color: red;
+		margin-left: 3%;
+		margin-right: 3%;
+	}
+	#ksh-chart .ksh-chart-serch div input[value="生 成"]{
+		background: #6096FA;
+		border: 1px solid #6096FA;
+		color: #fff;
+		height: 40px;
+	}
+	
+	#ksh-chart .ksh-chart-chart{
+		width: 100%;
+		height: 84%;
+		overflow: auto;
+	}
+	.ksh-chart-pie,.ksh-chart-bar,.ksh-chart-line{
+		width: 95%;
+		margin-left: 2.5%;
+		height: 45%;
+		border: 1px solid #000;
+		background: #fff;
+		margin-top: 1%;
+		border-radius: 5px;
+	}
+	.ksh-chart-pie #ksh-chart-pieleft{
+		width: 50%;
+		height: 100%;
+		float: left;
+	}
+	.ksh-chart-pie #ksh-chart-pieright{
+		width: 50%;
+		height: 100%;
+		float: right;
+	}
+</style>

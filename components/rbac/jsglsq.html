@@ -1,0 +1,139 @@
+<div id="jsglsq">
+	<div class="jsglsq-top">
+		<button ui-sref="homepage.qx-jsgl">角 色 管 理</button> > <button>授 权</button>
+	</div>
+	<div class="jsglsq-bottom">
+		<div class="jsglsq-bottom-from">
+			<button class="jsglsq-bottom-title">
+				角 色 信 息
+			</button>
+			<div class="from-from">
+				<div><button>角色名称</button><input type="text"></div>
+				<div><button>可以编辑菜单</button>
+					<div id="hub">
+				        <table>
+				    		<tbody ng-repeat="item in tree">
+				            	<tr>
+				            		<td><input type="checkbox"></td>
+				            		<td class="yiz">{{item.id}}</td>
+				            	</tr>
+				    			<tr>
+				    				<td colspan="3" class="er">
+				    					<table ng-repeat="itemli in item.navli">
+				    						<tr>
+						        				<td><input type="checkbox"></td>
+							            		<td class="erz">{{itemli.li}}</td>
+				    						</tr>
+				    						<tr  class="san">
+				    							<td colspan="3">
+				    								<table>
+				    									<tr ng-repeat="itemsan in itemli.sanji">
+									            			<td><input type="checkbox"></td>
+									            			<td>{{itemsan.sanli}}</td>
+									            		</tr>
+				    								</table>
+				    							</td>
+				    						</tr>
+				    					</table>
+				    				</td>
+				            		
+				    			</tr>
+				    		</tbody>
+				        </table>
+				    </div>
+				</div>
+			</div>
+			<div class="from-btn">
+				<button>确 认</button> <button>删 除</button>
+			</div>
+		</div>
+	</div>
+</div>
+<style>
+	#jsglsq{
+		width: 100%;
+		height: 100%;
+	}
+	#jsglsq .jsglsq-top{
+		width: 100%;
+		height: 3%;
+		background: #fff;
+		border-bottom: 1px solid #000;
+	}
+	#jsglsq .jsglsq-top button{
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+	}
+	#jsglsq .jsglsq-bottom{
+		width: 100%;
+		height: 95%;
+	}
+	#jsglsq .jsglsq-bottom .jsglsq-bottom-from{
+		width: 95%;
+		height: 95%;
+		margin-left: 2.5%;
+		border-radius: 5px;
+	}
+	#jsglsq .jsglsq-bottom .jsglsq-bottom-from .jsglsq-bottom-title{
+		width: 100%;
+		height: 10%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		font-size: 15px;
+		text-align: left;
+		padding-left: 10%;
+	}
+	#jsglsq .jsglsq-bottom .jsglsq-bottom-from .from-from{
+		width: 100%;
+		height: 82%;
+	}
+	#jsglsq .jsglsq-bottom .jsglsq-bottom-from .from-from div{
+		width: 100%;
+		height: 7%;
+	}
+	#jsglsq .jsglsq-bottom .jsglsq-bottom-from .from-from div button{
+		width: 30%;
+		height: 35px;
+		text-align: right;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-right: 20px;
+		float: left;
+	}
+	#jsglsq .jsglsq-bottom .jsglsq-bottom-from .from-from div input{
+		width: 40%;
+		height: 35px;
+	}
+	#jsglsq .jsglsq-bottom .jsglsq-bottom-from .from-from div div{
+		width: 40%;
+		height: 800%;
+		border: 1px solid #d4d4d7;
+		float: right;
+		margin-right: 30%;
+		background: #fff;
+		overflow: auto;
+	}
+	#jsglsq .jsglsq-bottom .jsglsq-bottom-from .from-btn{
+		width: 100%;
+		height: 8%;
+		text-align: center;
+	}
+	#jsglsq .jsglsq-bottom .jsglsq-bottom-from .from-btn button{
+		width: 180px;
+		height: 35px;
+		color: #fff;
+		margin-left: 2%;
+	}
+	#jsglsq .jsglsq-bottom .jsglsq-bottom-from .from-btn button:nth-child(1){
+		background: #6096FA;
+		border: 1px solid #6096FA;
+	}
+	#jsglsq .jsglsq-bottom .jsglsq-bottom-from .from-btn button:nth-child(2){
+		background: #F8113C;
+		border: 1px solid #F8113C;
+	}
+</style>

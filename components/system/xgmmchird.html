@@ -1,0 +1,92 @@
+<div id="xgmmchird">
+	<div class="xgmmchird-top">
+		<button class="msee">账号密码信息</button>
+		<div class="from">
+			<div class="{{divdisplay}}"><button>旧密码</button><input type="text" ng-disabled="isdisabled"></div>
+			<div class="{{divdisplay}}"><button>新密码</button><input type="password" ng-disabled="isdisabled"></div>
+			<div class="{{divdisplay}}"><button>确认密码</button><input type="password" ng-disabled="isdisabled"></div>
+			<button class="{{btndisplay}}">
+				恭喜您! 账户密码修改成功!
+			</button>
+		</div>
+	</div>
+	<div class="xgmmchird-bottom">
+		<button ng-click="xgmmchird()">{{xgmmchirdbtn}}</button>
+	</div>
+</div>
+
+<style>
+	#xgmmchird{
+		width: 100%;
+		height: 100%;
+	}
+	#xgmmchird .xgmmchird-top{
+		width: 100%;
+		height: 90%;
+	}
+	#xgmmchird .xgmmchird-top .msee{
+		width: 100%;
+		height: 7%;
+		text-align: left;
+		font-size: 15px;
+		margin-top: 1%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-left: 10%;
+	}
+	#xgmmchird .xgmmchird-top .from{
+		width: 40%;
+		height: 100%;
+		margin-left: 30%;
+	}
+	#xgmmchird .xgmmchird-top .from button{
+		width: 100%;
+		height: 50px;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		font-weight: 600;
+		font-size: 30px;
+	}
+	#xgmmchird .xgmmchird-top .from div{
+		height: 5%;
+		margin-top: 1.5%;
+		width: 100%;
+		/*text-align: center;*/
+	}
+	
+	#xgmmchird .xgmmchird-top .from div input{
+		height: 100%;
+		width: 40%;
+		padding-left: 5px;
+		border: 1px solid #d4d4d7;
+		background: #F7F7F9;
+	}
+	#xgmmchird .xgmmchird-top .from div button{
+		height: 100%;
+		width: 30%;
+		text-align: right;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-right: 10px;
+		font-weight: 500;
+		font-size: 13px;
+	}
+	
+	
+	
+	#xgmmchird .xgmmchird-bottom{
+		width: 100%;
+		height: 10%;
+		text-align: center;
+	}
+	#xgmmchird .xgmmchird-bottom button{
+		width: 180px;
+		height: 40px;
+		background: #6096FA;
+		border: 1px solid #6096FA;
+		color: #fff;
+	}
+</style>

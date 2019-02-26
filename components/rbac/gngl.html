@@ -1,0 +1,92 @@
+<div id="qx-gngl">
+	<div class="qx-gngl-top">
+		<div>
+			<label>搜 索</label> <input type="text">
+			<input type="button" value="新 建 功 能" ui-sref="homepage.qx-gngl.qx-gnglnew">
+			<input type="button" value="筛 选" ng-click="serch()">
+		</div>
+	</div>
+	<div class="qx-gngl-bottom">
+		<table>
+			<tr>
+				<th colspan="6"> 
+					角 色  列 表
+				</th>
+			</tr>
+			<tr>
+				<th>#</th>
+				<th>角色名称</th>
+				<th>创建时间</th>
+				<th>创建人</th>
+				<th>备注</th>
+				<th>操作</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td ui-sref="homepage.qx-gngl.qx-gnglcheck"><button>查看详情</button></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<style>
+	#qx-gngl{
+		width: 100%;
+		height: 100%;
+	}
+	#qx-gngl .qx-gngl-top{
+		width: 95%;
+		margin-left: 2.5%;
+		height: 8%;
+	}
+	#qx-gngl .qx-gngl-top div{
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		text-align: left;
+		position: relative;
+		top: 20%;
+	}
+	#qx-gngl .qx-gngl-top div label{
+		font-weight: 600;
+		font-size: 15px;
+	}
+	#qx-gngl .qx-gngl-top div input[type=text]{
+		width: 20%;
+		height: 25px;
+	}
+	#qx-gngl .qx-gngl-top div input[type=button]{
+		width: 10%;
+		height: 30px;
+		float: right;
+		color: #fff;
+	}
+	#qx-gngl .qx-gngl-top div input[value="筛 选"]{
+		background: #6096FA;
+		border: 1px solid #6096FA;
+		margin-right: 1%;
+	}
+	#qx-gngl .qx-gngl-top div input[value="新 建 功 能"]{
+		background: #FA7B14;
+		border: 1px solid #FA7B14;
+	}
+	#qx-gngl .qx-gngl-bottom{
+		width: 95%;
+		margin-left: 2.5%;
+		height: 90%;
+	}
+	#qx-gngl .qx-gngl-bottom table tr:nth-child(1){
+		background: #A6D3FA;
+	}
+	#qx-gngl .qx-gngl-bottom table tr:nth-child(1) th{
+		text-align: left;
+		padding-left: 10px;
+		color: #FFF;
+	}
+</style>

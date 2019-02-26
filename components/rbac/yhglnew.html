@@ -1,0 +1,144 @@
+<div id="yhglnew">
+	<div class="yhglnew-top">
+		<button ui-sref="homepage.qx-yhgl">用 户 管 理</button> > <button>新 建 用 户</button>
+	</div>
+	<div class="yhglnew-bottom">
+		<div class="yhglnew-bottom-from">
+			<button class="yhglnew-bottom-title">
+				用 户  信 息
+			</button>
+			<div class="from-from">
+				<div><button>用户名</button><input type="text"> <span>填写用户名,谨慎填写</span></div>
+				<div><button>密码</button><input type="password"> <span>密码长度6-12位,建议包含数字,字母,符号</span></div>
+				<div><button>确认密码</button><input type="password"></div>
+				<div><button>真实姓名</button><input type="text"></div>
+				<div><button>手机号码</button><input type="text"></div>
+				<div><button>电子邮箱</button><input type="text"></div>
+				<div><button>可以编辑菜单</button> 
+					<div id="hub">
+				        <table>
+				    		<tbody ng-repeat="item in tree">
+				            	<tr>
+				            		<td><input type="checkbox"></td>
+				            		<td class="yiz">{{item.id}}</td>
+				            	</tr>
+				    			<tr>
+				    				<td colspan="3" class="er">
+				    					<table ng-repeat="itemli in item.navli">
+				    						<tr>
+						        				<td><input type="checkbox"></td>
+							            		<td class="erz">{{itemli.li}}</td>
+				    						</tr>
+				    						<tr  class="san">
+				    							<td colspan="3">
+				    								<table>
+				    									<tr ng-repeat="itemsan in itemli.sanji">
+									            			<td><input type="checkbox"></td>
+									            			<td>{{itemsan.sanli}}</td>
+									            		</tr>
+				    								</table>
+				    							</td>
+				    						</tr>
+				    					</table>
+				    				</td>
+				            		
+				    			</tr>
+				    		</tbody>
+				        </table>
+				    </div>
+				</div>
+			</div>
+			<div class="from-btn">
+				<button>确 认</button> <button>取 消</button>
+			</div>
+		</div>
+	</div>
+</div>
+<style>
+	#yhglnew{
+		width: 100%;
+		height: 100%;
+	}
+	#yhglnew .yhglnew-top{
+		width: 100%;
+		height: 3%;
+		background: #fff;
+		border-bottom: 1px solid #000;
+	}
+	#yhglnew .yhglnew-top button{
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+	}
+	#yhglnew .yhglnew-bottom{
+		width: 100%;
+		height: 95%;
+	}
+	#yhglnew .yhglnew-bottom .yhglnew-bottom-from{
+		width: 95%;
+		height: 95%;
+		margin-left: 2.5%;
+		border-radius: 5px;
+	}
+	#yhglnew .yhglnew-bottom .yhglnew-bottom-from .yhglnew-bottom-title{
+		width: 100%;
+		height: 10%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		font-size: 15px;
+		text-align: left;
+		padding-left: 10%;
+	}
+	#yhglnew .yhglnew-bottom .yhglnew-bottom-from .from-from{
+		width: 100%;
+		height: 82%;
+	}
+	#yhglnew .yhglnew-bottom .yhglnew-bottom-from .from-from div{
+		width: 100%;
+		height: 7%;
+	}
+	#yhglnew .yhglnew-bottom .yhglnew-bottom-from .from-from div button{
+		width: 30%;
+		height: 90%;
+		text-align: right;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-right: 20px;
+		float: left;
+	}
+	#yhglnew .yhglnew-bottom .yhglnew-bottom-from .from-from div input{
+		width: 40%;
+		height: 90%;
+	}
+	#yhglnew .yhglnew-bottom .yhglnew-bottom-from .from-from div div{
+		width: 40%;
+		height: 600%;
+		border: 1px solid #d4d4d7;
+		float: right;
+		margin-right: 30%;
+		background: #fff;
+		overflow: auto;
+	}
+	#yhglnew .yhglnew-bottom .yhglnew-bottom-from .from-btn{
+		width: 100%;
+		height: 8%;
+		text-align: center;
+	}
+	#yhglnew .yhglnew-bottom .yhglnew-bottom-from .from-btn button{
+		width: 180px;
+		height: 35px;
+		color: #fff;
+		margin-left: 2%;
+	}
+	#yhglnew .yhglnew-bottom .yhglnew-bottom-from .from-btn button:nth-child(1){
+		background: #6096FA;
+		border: 1px solid #6096FA;
+	}
+	#yhglnew .yhglnew-bottom .yhglnew-bottom-from .from-btn button:nth-child(2){
+		background: #F8113C;
+		border: 1px solid #F8113C;
+	}
+</style>

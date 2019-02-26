@@ -1,0 +1,95 @@
+<div id="xxts">
+	<div class="xxts-top">
+		<div>
+			<label>开始时间</label> <input type="text" class="jeinput" id="date01" placeholder="YYYY-MM-DD hh:mm:ss">
+			<label>结束时间</label> <input type="text" class="jeinput" id="date02" placeholder="YYYY-MM-DD hh:mm:ss">
+			<label>发起部门</label> <select></select> 
+			<label>类型</label> <select></select>
+			<input type="button" value="筛选" ng-click="serch()">
+			<input type="button" value="新建信息" ui-sref="homepage.xt-xxts.xt-xxtschird">
+		</div>
+	</div>
+	<div class="xxts-bottom">
+		<table>
+			<tr>
+				<th colspan="7">已发送列表</th>
+			</tr>
+			<tr>
+				<th>#</th>
+				<th>名称</th>
+				<th>发起部门</th>
+				<th>发起人</th>
+				<th>接收人员</th>
+				<th>类型</th>
+				<th>发送时间</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<style>
+	#xxts{
+		width: 100%;
+		height: 100%;
+	}
+	#xxts .xxts-top{
+		width: 95%;
+		height: 10%;
+		margin-left: 2.5%;
+	}
+	#xxts .xxts-top div{
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		position: relative;
+		top: 20%;
+		text-align: center;
+	}
+	#xxts .xxts-top div label{
+		margin-left: 1%;
+		font-size: 15px;
+	}
+	#xxts .xxts-top div input,#xxts .xxts-top div select{
+		width: 10%;
+		height: 30px;
+	}
+	#xxts .xxts-top div span{
+		color: red;
+		margin-left: 3%;
+		margin-right: 3%;
+	}
+	#xxts .xxts-top div input[type=button]{
+		background: #6096FA;
+		border: 1px solid #6096FA;
+		color: #fff;
+		height: 40px;
+		margin-left: 1%;
+	}
+	#xxts .xxts-top div input:last-child{
+		background: #FA7B14;
+		border: 1px solid #FA7B14;
+	}
+	#xxts .xxts-bottom{
+		width: 95%;
+		height: 88%;
+		margin-left: 2.5%;
+		overflow: auto;
+	}
+	#xxts .xxts-bottom table tr:nth-child(1){
+		background: #A6D3FA;
+	}
+	#xxts .xxts-bottom table tr:nth-child(1) th{
+		color: #fff !important;
+		text-align: left;		
+	}
+</style>

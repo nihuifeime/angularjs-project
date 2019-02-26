@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />-->
+		<script type="text/javascript" src="include/js/jquery-3.2.1.min.js" ></script>
+		<link rel="stylesheet" href="include/Font-Awesome-3.2.1/css/font-awesome.css" />
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+				background-image: url(img/background.jpg);
+				background-size: 100% 100%;
+			}
+			body #app{
+				width: 100%;
+				height: 100%;
+			}
+			body #app button{
+				width: 100%;
+				height: 50%;
+				background: rgba(255,255,255,0);
+				border: 0px;
+				outline: none;
+				color: #fff;
+				font-size: 35px;
+			}
+			body #app button img{
+				height: 35%;
+			}
+			body #app .btn{
+				width: 100%;
+				height: 50%;
+				/*background: rgba(0,0,0,0.1);*/
+				text-align: center;
+			}
+			body #app .btn button{
+				width: 40%;
+				height: 15%;
+				background: #6096fa;
+				font-size: 25px;
+				margin-top: 40%;
+				border-radius: 5px;
+			}
+			body #app .btn button a{
+				text-decoration: none;
+				color: #fff;
+			}
+			body .appzz{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: rgba(0,0,0,0.7);
+				display: none;
+			}
+			body .appzz div{
+				width: 100%;
+				height: 15%;
+			}
+			body .appzz div span{
+				display: block;
+				transform:rotate(315deg);
+				font-size: 60px;
+				margin-right: 10%;
+				margin-top: 40px;
+				float: right;
+				color: #fff;	
+				animation:background 1s linear infinite;
+			}
+			@keyframes background {
+				50%{
+					margin-right: 7%;
+					margin-top: 25px;
+				}
+				100% {
+					margin-right: 10%;
+					margin-top: 40px;
+				}
+			}
+			body .appzz button{
+				width: 100%;
+				height: 15%;
+				background: rgba(255,255,255,0);
+				border: 0px;
+				outline: none;
+				color: #fff;
+				font-size: 35px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="appzz">
+			<div><span class="icon icon-hand-right"></span></div>
+			<button>点击右上角<br>选择在浏览器中打开</button>
+		</div>
+		<div id="app">
+			<button>
+				<img src="img/logo.png"><br>
+				<b>安 全 风 险 隐 患 双 重 预 防 平 台</b>
+			</button>
+			<div class="btn">
+				<!--<button><a href="221.204.12.20:8080/Risk/doc/risk.apk">一键下载APP</a></button>-->
+				<button><a href="http://192.168.14.38:8080/Risk/doc/risk.apk">一键下载APP</a></button>
+			</div>
+		</div>
+		<script>
+			$(".appzz").click(function(){
+				$(".appzz").css("display","none")
+			})
+			
+			function is_weixin() {
+				var ua = navigator.userAgent.toLowerCase();
+				if (ua.match(/MicroMessenger/i) == "micromessenger") {
+				 	$(".appzz").css("display","block")
+				} else {
+				 	return false;
+				}
+			}
+			is_weixin()
+			
+			function is_QQ() {
+			 	var ua = navigator.userAgent;
+			 	if (ua.match(/QQ\//i) == "QQ/") {
+			 		$(".appzz").css("display","block")
+			 	} else {
+			 		return false;
+			 	}
+			}
+			is_QQ()
+		</script>
+	</body>
+</html>

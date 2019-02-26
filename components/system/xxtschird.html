@@ -1,0 +1,200 @@
+<div id="xxtschird">
+	<div class="xxtschird-top">
+		<button ui-sref="homepage.xt-xxts">消 息 推 送 管 理</button> > <button>新 建 信 息</button>
+	</div>
+	<div class="xxtschird-bottom">
+		<button class="xxtschird-bottom-title">
+			新 建 信 息
+		</button>
+		<div class="xxtschird-bottom-from">
+			<div class="from-from">
+				<div class="borderr"></div>
+				<div><button>消息主标题</button><input type="text"></div>
+				<div><button>消息类型</button><input type="text"></div>
+				<div><button>发送到</button><input type="text"> <span class="icon icon-plus-sign" data-toggle="modal" data-target=".bd-example-modal-lg"> 搜索添加联系人</span></div>
+				<div class="textarea"><button>内容</button><textarea></textarea></div>
+				<div><button>上传文件</button><input type="text"></div>
+			</div>
+			<div class="from-btn">
+				<button>确 认 发 送</button> <button>取 消 发 送</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      	<div class="modal-header" style="background: #9AABC7;">
+        	<h3 class="modal-title" id="exampleModalLongTitle" style="color: #fff;font-weight: 600;">查 找 联 系 人</h3>
+        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          		<span aria-hidden="true">&times;</span>
+       	 	</button>
+      	</div>
+      	<div class="modal-body">
+      		
+      		<div class="form-group group1">
+	            <label>选择发送部门</label> <select></select> <label>企业搜索</label> <input type="text"> <span>*满足任意一条即可生成</span> <button>筛 选</button>
+		    </div>
+      		
+	        <div class="form-group group2">
+	            <table>
+	            	<tr>
+						<th colspan="3" background="#f7f7f9">列 表</th>
+					</tr>
+					<tr>
+						<th>#</th>
+						<th>公司名称</th>
+						<th>操作</th>
+					</tr>
+	            </table>
+		    </div>
+		    
+		    <div class="form-group group3">
+	            <table>
+	            	<tr>
+	            		<th>已 选 择</th>
+	            	</tr>
+	            </table>
+	            <div>
+	            	
+	            </div>
+		    </div>
+		    
+      	</div>
+      	<div class="modal-footer">
+        	<button type="button" class="btn btn-primary" data-dismiss="modal">确 认 选 择</button>
+      	</div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+	#xxtschird{
+		width: 100%;
+		height: 100%;
+	}
+	#xxtschird .xxtschird-top{
+		width: 100%;
+		height: 3%;
+		background: #fff;
+		border-bottom: 1px solid #000;
+	}
+	#xxtschird .xxtschird-top button{
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+	}
+	#xxtschird .xxtschird-bottom{
+		width: 100%;
+		height: 95%;
+	}
+	#xxtschird .xxtschird-bottom .xxtschird-bottom-title{
+		width: 100%;
+		height: 5%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		font-weight: 600;
+		font-size: 25px;
+	}
+	#xxtschird .xxtschird-bottom .xxtschird-bottom-from{
+		width: 95%;
+		height: 95%;
+		margin-left: 2.5%;
+		background: #fff;
+		border-radius: 5px;
+	}
+	#xxtschird .xxtschird-bottom .xxtschird-bottom-from .from-from{
+		width: 100%;
+		height: 92%;
+	}
+	#xxtschird .xxtschird-bottom .xxtschird-bottom-from .from-from div{
+		width: 100%;
+		height: 6%;
+	}
+	#xxtschird .xxtschird-bottom .xxtschird-bottom-from .from-from div button{
+		width: 30%;
+		height: 35px;
+		text-align: right;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-right: 20px;
+		float: left;
+	}
+	#xxtschird .xxtschird-bottom .xxtschird-bottom-from .from-from .textarea{
+		width: 100%;
+		height: 35%;
+	}
+	#xxtschird .xxtschird-bottom .xxtschird-bottom-from .from-from div input{
+		width: 40%;
+		height: 35px;
+	}
+	#xxtschird .xxtschird-bottom .xxtschird-bottom-from .from-from div textarea{
+		width: 40%;
+		height: 95%;
+	}
+	#xxtschird .xxtschird-bottom .xxtschird-bottom-from .from-btn{
+		width: 100%;
+		height: 8%;
+		text-align: center;
+	}
+	#xxtschird .xxtschird-bottom .xxtschird-bottom-from .from-btn button{
+		width: 180px;
+		height: 35px;
+		color: #fff;
+		margin-left: 2%;
+	}
+	#xxtschird .xxtschird-bottom .xxtschird-bottom-from .from-btn button:nth-child(1){
+		background: #6096FA;
+		border: 1px solid #6096FA;
+	}
+	#xxtschird .xxtschird-bottom .xxtschird-bottom-from .from-btn button:nth-child(2){
+		background: #F8113C;
+		border: 1px solid #F8113C;
+	}
+	.modal-body .group1 label{
+		font-size: 15px;
+		margin-left: 7%;
+	}
+	.modal-body .group1 span{
+		color: red;
+		margin-left: 3%;
+	}
+	.modal-body .group1 button{
+		width: 15%;
+		height: 35px;
+		color: #fff;
+		background: #6096FA;
+		border: 1px solid #6096FA;
+		margin-left: 5%;
+	}
+	.modal-body .group2 table tr:nth-child(1){
+		background: #A6D3FA;
+	}
+	.modal-body .group2 table tr:nth-child(1) th{
+		text-align: left;
+		padding-left: 10px;
+		color: #FFF;
+	}
+	.modal-body .group3 table tr:nth-child(1){
+		background: #A6D3FA;
+	}
+	.modal-body .group3 table tr:nth-child(1) th{
+		text-align: left;
+		padding-left: 10px;
+		color: #FFF;
+	}
+	.modal-body .group3 div{
+		width: 100%;
+		height: 200px;
+		border: 1px solid #d4d4d7;
+	}
+</style>

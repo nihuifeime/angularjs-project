@@ -1,0 +1,103 @@
+<div id="yhglrevise">
+	<div class="yhglrevise-top">
+		<button ui-sref="homepage.qx-yhgl">用 户 管 理</button> > <button>查 看 修 改</button>
+	</div>
+	<div class="yhglrevise-bottom">
+		<div class="yhglrevise-bottom-from">
+			<button class="yhglrevise-bottom-title">
+				用 户  信 息
+			</button>
+			<div class="from-from">
+				<div><button>用户名</button><input type="text" ng-disabled="isdisabled"> <span>填写用户名,谨慎填写</span></div>
+				<div><button>密码</button><input type="password" ng-disabled="isdisabled"> <span>密码长度6-12位,建议包含数字,字母,符号</span></div>
+				<div><button>确认密码</button><input type="password" ng-disabled="isdisabled"></div>
+				<div><button>真实姓名</button><input type="text" ng-disabled="isdisabled"></div>
+				<div><button>手机号码</button><input type="text" ng-disabled="isdisabled"></div>
+				<div><button>电子邮箱</button><input type="text" ng-disabled="isdisabled"></div>
+			</div>
+			<div class="from-btn">
+				<button ng-click="yhgl()">{{yhglrevisebtn}}</button> <button>删 除</button>
+			</div>
+		</div>
+	</div>
+</div>
+<style>
+	#yhglrevise{
+		width: 100%;
+		height: 100%;
+	}
+	#yhglrevise .yhglrevise-top{
+		width: 100%;
+		height: 3%;
+		background: #fff;
+		border-bottom: 1px solid #000;
+	}
+	#yhglrevise .yhglrevise-top button{
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+	}
+	#yhglrevise .yhglrevise-bottom{
+		width: 100%;
+		height: 95%;
+	}
+	#yhglrevise .yhglrevise-bottom .yhglrevise-bottom-from{
+		width: 95%;
+		height: 95%;
+		margin-left: 2.5%;
+		border-radius: 5px;
+	}
+	#yhglrevise .yhglrevise-bottom .yhglrevise-bottom-from .yhglrevise-bottom-title{
+		width: 100%;
+		height: 10%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		font-size: 15px;
+		text-align: left;
+		padding-left: 10%;
+	}
+	#yhglrevise .yhglrevise-bottom .yhglrevise-bottom-from .from-from{
+		width: 100%;
+		height: 82%;
+	}
+	#yhglrevise .yhglrevise-bottom .yhglrevise-bottom-from .from-from div{
+		width: 100%;
+		height: 7%;
+	}
+	#yhglrevise .yhglrevise-bottom .yhglrevise-bottom-from .from-from div button{
+		width: 30%;
+		height: 35px;
+		text-align: right;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-right: 20px;
+		float: left;
+	}
+	#yhglrevise .yhglrevise-bottom .yhglrevise-bottom-from .from-from div input{
+		width: 40%;
+		height: 35px;
+		border: 1px solid #D4D4D7;
+	}
+	#yhglrevise .yhglrevise-bottom .yhglrevise-bottom-from .from-btn{
+		width: 100%;
+		height: 8%;
+		text-align: center;
+	}
+	#yhglrevise .yhglrevise-bottom .yhglrevise-bottom-from .from-btn button{
+		width: 180px;
+		height: 35px;
+		color: #fff;
+		margin-left: 2%;
+	}
+	#yhglrevise .yhglrevise-bottom .yhglrevise-bottom-from .from-btn button:nth-child(1){
+		background: #6096FA;
+		border: 1px solid #6096FA;
+	}
+	#yhglrevise .yhglrevise-bottom .yhglrevise-bottom-from .from-btn button:nth-child(2){
+		background: #F8113C;
+		border: 1px solid #F8113C;
+	}
+</style>

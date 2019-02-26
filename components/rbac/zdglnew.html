@@ -1,0 +1,107 @@
+<div id="zdglnew">
+	<div class="zdglnew-top">
+		<button ui-sref="homepage.qx-zdgl">字 典 管 理</button> > <button>新 建 字 典</button>
+	</div>
+	<div class="zdglnew-bottom">
+		<div class="zdglnew-bottom-from">
+			<button class="zdglnew-bottom-title">
+				字 典  信 息
+			</button>
+			<div class="from-from">
+				<div><button>字典名称</button><input type="text"></div>
+				<div><button>上级名称</button><input type="text"></div>
+				<div><button>备注</button><textarea></textarea></div>
+			</div>
+			<div class="from-btn">
+				<button>确 认</button> <button>取 消</button>
+			</div>
+		</div>
+	</div>
+</div>
+<style>
+	#zdglnew{
+		width: 100%;
+		height: 100%;
+	}
+	#zdglnew .zdglnew-top{
+		width: 100%;
+		height: 3%;
+		background: #fff;
+		border-bottom: 1px solid #000;
+	}
+	#zdglnew .zdglnew-top button{
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+	}
+	#zdglnew .zdglnew-bottom{
+		width: 100%;
+		height: 95%;
+	}
+	#zdglnew .zdglnew-bottom .zdglnew-bottom-from{
+		width: 95%;
+		height: 95%;
+		margin-left: 2.5%;
+		border-radius: 5px;
+	}
+	#zdglnew .zdglnew-bottom .zdglnew-bottom-from .zdglnew-bottom-title{
+		width: 100%;
+		height: 10%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		font-size: 15px;
+		text-align: left;
+		padding-left: 10%;
+	}
+	#zdglnew .zdglnew-bottom .zdglnew-bottom-from .from-from{
+		width: 100%;
+		height: 82%;
+	}
+	#zdglnew .zdglnew-bottom .zdglnew-bottom-from .from-from div{
+		width: 100%;
+		height: 7%;
+	}
+	#zdglnew .zdglnew-bottom .zdglnew-bottom-from .from-from div button{
+		width: 30%;
+		height: 35px;
+		text-align: right;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-right: 20px;
+		float: left;
+	}
+	#zdglnew .zdglnew-bottom .zdglnew-bottom-from .from-from div input{
+		width: 40%;
+		height: 35px;
+	}
+	#zdglnew .zdglnew-bottom .zdglnew-bottom-from .from-from div textarea{
+		width: 40%;
+		height: 250px;
+		border: 1px solid #d4d4d7;
+		float: right;
+		margin-right: 30%;
+		background: #fff;
+	}
+	#zdglnew .zdglnew-bottom .zdglnew-bottom-from .from-btn{
+		width: 100%;
+		height: 8%;
+		text-align: center;
+	}
+	#zdglnew .zdglnew-bottom .zdglnew-bottom-from .from-btn button{
+		width: 180px;
+		height: 35px;
+		color: #fff;
+		margin-left: 2%;
+	}
+	#zdglnew .zdglnew-bottom .zdglnew-bottom-from .from-btn button:nth-child(1){
+		background: #6096FA;
+		border: 1px solid #6096FA;
+	}
+	#zdglnew .zdglnew-bottom .zdglnew-bottom-from .from-btn button:nth-child(2){
+		background: #F8113C;
+		border: 1px solid #F8113C;
+	}
+</style>

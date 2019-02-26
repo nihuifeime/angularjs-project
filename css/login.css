@@ -1,0 +1,425 @@
+*{
+	margin: 0 ;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+.html{
+	width: 100%;
+	height: 100%;
+}
+.body{
+	width: 100%;
+	height: 100%;
+	min-width: 1230px;
+	min-height: 600px;
+	overflow: hidden;
+}
+#login{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/background.jpg);
+    background-size: 100% 100%;
+}
+#login .login-title{
+	width: 100%;
+	height: 50%;
+}
+#login .login-title button{
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0);
+	border: 0px;
+	outline: none;
+	font-size: 35px;
+	color: #fff;
+	font-weight: 600;
+}
+#login .login-title button img{
+	height: 15%;
+}
+#login .login-title button span{
+	font-size: 26px;
+	margin-left: 65px;
+	font-weight: 400;
+}
+#login .login-dl{
+	width: 100%;
+	height: 47%;
+}
+#login .login-dl .dl-dl{
+	width: 25%;
+	height: 60%;
+	margin-left: 37.5%;
+	text-align: center;
+}
+#login .login-dl .dl-dl input{
+	width: 85%;
+	height: 15%;
+	margin-top: 14px;
+	border: 1px solid #7297d7;
+	background: #fff;
+	padding-left: 10px;
+	border-radius: 1px;
+}
+#login .login-dl .dl-dl input:nth-child(1){
+	margin-top: 100px;
+}
+#login .login-dl .dl-dl input:nth-child(3){
+	border: 0px solid #7297d7;
+	text-align: center;
+	margin-top: 0px;
+	color: red;
+	font-weight: 600;
+}
+#login .login-dl .dl-dl button{
+	width: 42%;
+	height: 15%;
+	background: #6096fa;
+	border: 1px solid #6096fa;
+	color: #fff;
+	border-radius: 1px;
+}
+#login .login-dl .dl-dl .registe{
+	background: orangered;
+	border: 1px solid orangered;
+}
+#login .login-foot{
+	width: 100%;
+	height: 3%;
+}
+#login .login-foot button{
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0);
+	border: 0px;
+	outline: none;
+	font-size: 9px;
+	color:#7297d7;
+}
+
+
+
+#homepage{
+	width: 100%;
+	height: 100%;
+}
+#homepage .home-head{
+	width: 100%;
+	height: 8%;
+	background: #102041;
+}
+#homepage .home-head button{
+	height: 100%;
+	background: rgba(255,255,255,0);
+	border: 0px;
+	outline: none;
+	font-size: 9px;
+	color: #fff;
+	padding: 0px 10px;
+}
+#homepage .home-head .left{
+	width: 50%;
+	height: 100%;
+	float: left;
+	color: #fff;
+}
+#homepage .home-head .left button img{
+	height: 60%;
+}
+#homepage .home-head .left button{
+	font-size: 25px;
+	font-weight: 600;
+}
+#homepage .home-head .left button:nth-child(1){
+	float: left;
+}
+#homepage .home-head .left button:nth-child(2) span{
+	font-size: 13px;
+	margin-left: 13px;
+}
+
+#homepage .home-head .right{
+	width: 50%;
+	height: 100%;
+	float: right;
+	color: #fff;
+}
+#homepage .home-head .right button{
+	float: right;
+	margin-right: 20px;
+	font-size: 15px;
+	padding: 0px;
+}
+#homepage .home-head .right button span{
+	padding: 5px 10px;
+	background: #fff;
+	color: #000;
+	border-radius: 3px;
+}
+#homepage .home-center{
+	width: 90%;
+	margin-left: 5%;
+	height: 89.5%;
+}
+#homepage .home-foot{
+	width: 100%;
+	height: 2.5%;
+	background: #d4d4d7;
+}
+#homepage .home-foot button{
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0);
+	border: 0px;
+	outline: none;
+	font-size: 9px;
+	color: #fff;
+}
+
+::-webkit-scrollbar   
+{   
+    width: 6px;   
+    height: 6px;   
+    background-color: #F5F5F5;
+    /*display: none;*/   
+ }   
+     
+/*定义滚动条轨道 内阴影+圆角*/   
+::-webkit-scrollbar-track   
+{   
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);   
+    border-radius: 10px;   
+    background-color: #F5F5F5;   
+}   
+     
+/*定义滑块 内阴影+圆角*/   
+::-webkit-scrollbar-thumb   
+{   
+    border-radius: 10px;   
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);   
+    /*background-color: #102041;*/
+    background-color: #aaa;   
+}
+
+
+
+
+
+
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+table tr th{
+	text-align: center;
+	color: #151515;
+	font-family: "微软雅黑";
+	/*border-bottom: 1px solid #d4d4d7;
+	border-left: 1px solid #d4d4d7;
+	border-right: 1px solid #d4d4d7;*/
+	border: 1px solid #D4D4D7;
+	padding-left: 5px;
+	font-size: 13px;
+	height: 30px;
+}
+table tr td:last-child button{
+	height: 100%;
+	background: rgba(255,255,255,0);
+	border: 0px;
+	outline: none;
+}
+table tr td:last-child button:nth-child(1){
+	width: 50%;
+	height: 100%;
+	background: rgba(255,255,255,0);
+	border: 0px;
+	outline: none;
+	color: green;
+}
+table tr td:last-child button:nth-child(2){
+	width: 50%;
+	height: 100%;
+	background: rgba(255,255,255,0);
+	border: 0px;
+	color: #0099FF;
+	outline: none;
+}
+
+table tr td{
+	text-align: center;
+	color: #151515;
+	font-family: "微软雅黑";
+	border: 1px solid #d4d4d7;
+	padding-left: 5px;
+	font-size: 13px;
+	height: 30px;
+}
+table tr td:nth-child(2){
+	text-align: left;
+}
+table tr:nth-child(even){
+	background: #f4f4f4;
+}
+@media only screen and (min-height: 100px) and (max-height: 700px) {
+	
+	table tr th{
+		text-align: center;
+		color: #151515;
+		font-family: "微软雅黑";
+		border: 1px solid #D4D4D7;
+		padding-left: 5px;
+		font-size: 11px;
+		height: 25px;
+	}
+	table tr td{
+		text-align: center;
+		color: #151515;
+		font-family: "微软雅黑";
+		border: 1px solid #d4d4d7;
+		padding-left: 5px;
+		font-size: 11px;
+		height: 25px;
+	}
+	
+}
+
+
+.none{
+	display: none;
+}
+.block{
+	display: block;
+}
+.borderr{
+	height: 1%;
+	border: #fff solid 0px !important;
+}
+
+.inputborder{
+	border: 1px solid #007BFF !important;
+}
+.fc-d47{
+	border: 1px solid #D4D4D7 !important;
+}
+
+#registe{
+	width: 100%;
+	height: 100%;
+}
+#registe .home-head{
+	width: 100%;
+	height: 8%;
+	background: #102041;
+}
+#registe .home-head button{
+	height: 100%;
+	background: rgba(255,255,255,0);
+	border: 0px;
+	outline: none;
+	font-size: 9px;
+	color: #fff;
+	padding: 0px 10px;
+}
+#registe .home-head .left{
+	width: 50%;
+	height: 100%;
+	float: left;
+	color: #fff;
+}
+#registe .home-head .left button img{
+	height: 50%;
+}
+#registe .home-head .left button{
+	font-size: 25px;
+	font-weight: 600;
+}
+#registe .home-head .left button:nth-child(1){
+	float: left;
+}
+#registe .home-head .left button:nth-child(2) span{
+	font-size: 13px;
+	margin-left: 13px;
+}
+
+#registe .home-head .right{
+	width: 50%;
+	height: 100%;
+	float: right;
+	color: #fff;
+}
+#registe .home-head .right button{
+	float: right;
+	margin-right: 20px;
+	font-size: 15px;
+	padding: 0px;
+}
+#registe .home-head .right button span{
+	padding: 5px 10px;
+	background: #fff;
+	color: #000;
+	border-radius: 3px;
+}
+#registe .home-center{
+	width: 100%;
+	height: 89.5%;
+}
+#registe .home-foot{
+	width: 100%;
+	height: 2.5%;
+	background: #d4d4d7;
+}
+#registe .home-foot button{
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0);
+	border: 0px;
+	outline: none;
+	font-size: 9px;
+	color: #fff;
+}
+
+
+
+
+
+	
+	
+#hub table .san{
+	display: none;
+	/*text-indent:20px;*/
+}
+/*.san,.er{
+	display: none;
+	text-indent:20px;
+}*/
+#hub table .er{
+	background: #D9EDF7 !important;
+}
+
+#hub table{
+	border: 0px !important;
+}
+#hub table tr{
+	border: 0px;
+}
+#hub table tr td,#hub table tr th{
+	border: 0px !important;
+	border-bottom: 1px solid #D4D4D7 !important;
+	height: 30px;
+}
+#hub table tr td:nth-child(2),#hub table tr th:nth-child(2){
+	width: 93%;
+	text-align: left;
+}
+
+.iconwait{
+	width: 100%;
+	text-align: center;
+	position: relative;
+	top: 20%;
+}
+.iconwait .icon-spinner{
+	font-size: 35px;
+}
+	

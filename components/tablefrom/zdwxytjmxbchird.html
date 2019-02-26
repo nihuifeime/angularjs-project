@@ -1,0 +1,88 @@
+<div id="zdwxytjmxbchird">
+	<div class="zdwxytjmxbchird-router">
+		<button ui-sref="homepage.zdwxytjmxbhome">返回上一级</button>
+	</div>
+	<div class="borderr"></div>
+	<div class="zdwxytjmxbchird-title">
+		<button>太原市重大危险源统计明细表</button>
+	</div>
+	<div class="zdwxytjmxbchird-time">
+		<button>统计时间:2017年12月8日</button>
+	</div>
+	<div class="borderr"></div>
+	<div class="zdwxytjmxbchird-table">
+		<table id="table-table">
+			<tr>
+				<th>序号</th>
+				<th>企业名称</th>
+				<th>重大危险源名称</th>
+				<th>重大危险源等级</th>
+				<th>地点</th>
+				<th>备案时间</th>
+				<th>说明</th>
+			</tr>
+			<tr ng-repeat="(item,$index) in td">
+				<td>{{$index+1}}</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<style>
+	#zdwxytjmxbchird{
+		width: 100%;
+		height: 100%;
+	}
+	#zdwxytjmxbchird .zdwxytjmxbchird-router{
+		width: 100%;
+		height: 3%;
+		background: #fff;
+		border-bottom: 1px solid #000;
+	}
+	#zdwxytjmxbchird .zdwxytjmxbchird-router button{
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+	}
+	#zdwxytjmxbchird .zdwxytjmxbchird-title{
+		width: 100%;
+		height: 6%;
+		border-bottom: 0px;
+	}
+	#zdwxytjmxbchird .zdwxytjmxbchird-title button{
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		font-size: 20px;
+		font-weight: 600;
+	}
+	#zdwxytjmxbchird .zdwxytjmxbchird-time{
+		width: 100%;
+		height: 4%;
+		border-bottom: 0px;
+	}
+	#zdwxytjmxbchird .zdwxytjmxbchird-time button{
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		font-size: 15px;
+		font-weight: 500;
+	}
+	#zdwxytjmxbchird .zdwxytjmxbchird-table{
+		width: 95%;
+		margin-left: 2.5%;
+		height: 87%;
+		overflow: auto;
+	}
+</style>

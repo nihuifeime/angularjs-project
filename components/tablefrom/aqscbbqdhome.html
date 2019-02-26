@@ -1,0 +1,68 @@
+<div id="aqscbbqdchome">
+	<div class="borderr"></div>
+	<div class="aqscbbqdchome-table">
+		<table id="table-table">
+			<tr>
+				<th colspan="11">安全生产报表清单</th>
+			</tr>
+			<tr>
+				<th rowspan="2">序号</th>
+				<th rowspan="2">辖区</th>
+				<th rowspan="2">企业数量</th>
+				<th colspan="4">风险数量</th>
+				<th colspan="2">隐患数量</th>
+				<th rowspan="2">已完成</th>
+				<th rowspan="2">未完成</th>
+			</tr>
+			<tr>
+				<th>红</th>
+				<th>橙</th>
+				<th>黄</th>
+				<th>蓝</th>
+				<th>重大隐患</th>
+				<th>一般隐患</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>太原市小店区</td>
+				<td ui-sref="homepage.aqscbbqd.aqscbbqdchird" class="fred">200</td>
+				<td>15</td>
+				<td>20</td>
+				<td>25</td>
+				<td>30</td>
+				<td>18</td>
+				<td>28</td>
+				<td>20</td>
+				<td>40</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<style>
+	#aqscbbqdchome{
+		width: 100%;
+		height: 100%;
+	}
+	#aqscbbqdchome .aqscbbqdchome-table{
+		width: 95%;
+		margin-left: 2.5%;
+		height: 95%;
+		overflow: auto;
+	}
+	#aqscbbqdchome .aqscbbqdchome-table table tr:nth-child(1){
+		background: #A6D3FA;
+	}
+	#aqscbbqdchome .aqscbbqdchome-table table tr:nth-child(1) th{
+		text-align: left;
+		padding-left: 10px;
+		color: #FFF;
+	}
+	.fred{
+		color: red;
+		font-weight: 600;
+	}
+	.fred:hover{
+		cursor: pointer;
+	}
+</style>

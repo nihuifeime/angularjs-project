@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>-->
+		<script type="text/javascript" src="include/js/jquery-3.2.1.min.js" ></script>
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.body{
+				width: 100%;
+				height: 100%;
+				background: #F7F7F7;
+			}
+			.cont{
+				width: 30%;
+				height: 100%;
+				margin-left: 30%;
+			}
+			.cont img{
+				margin-top: 15%;
+			}
+			h2{
+				margin-top: 5%;
+			}
+			h4{
+				margin-top: 5%;
+			}
+			ul{
+				margin-top: 3%;
+				margin-left: 8%;
+			}
+			ul li{
+				height: 30px;
+				line-height: 30px;
+				
+			}
+			p{
+				margin-top: 5%;
+				font-size: 13px;
+				font-family: "微软雅黑";
+			}
+			ul li a{
+				color: #4285f4;
+				font-size: 15px;
+				font-family: "微软雅黑";
+			}
+			button{
+				background: #4285F4;
+				color: #fff;
+				width: 100px;
+				height: 35px;
+				border: 1px solid #4285F4;
+				border-radius: 1px;
+				margin-top: 10%;
+			}
+		</style>
+	</head>
+	<body id="body">
+	    <div class="body">
+	    	<div class="cont">
+	    		<img src="img/jiong.png">
+	    		<h2>浏览器版本过低,无法访问此网站</h2>
+	    		<h4>请试试以下办法:</h4>
+	    		<ul>
+	    			<li><a href="#">检查网络连接</a></li>
+	    			<li><a href="https://www.baidu.com/link?url=q8b60yzsF5N26BDeYMr765Tc1XbFTIhMkmsBD-6PzWcD5UjWH1P_yW066GzOjD720aitmZ8hmPmUxGAY09lFYLvVYZt7IlfpaN5g0HANXSK&wd=&eqid=c5cd2fad0000013e000000025a712588">点击下载谷歌浏览器</a></li>
+	    			<li><a href="https://www.baidu.com/link?url=lNvxPvsSmFQqg31078hwA6zx-0vE5Elh3xUKAHySocnMguhER_2zByDopIg9mzUlCOayU2FmitnU67y7CeAknW3rUKSFed4Y8FwEo9T9wEK&wd=&eqid=a008a6c80000086c000000025a7125b2">点击下载360极速浏览器</a></li>
+	    		</ul>
+	    		<p>ERR_CONNECTION_TIMED_OUT</p>
+	    		<button>重新加载</button>
+	    	</div>
+	    </div>
+	    <script>
+	    
+	    	var buuu =  document.documentElement.clientHeight;
+	    	
+			$("#body").height(buuu)
+	    	
+	    	$("button").click(function(){
+	    		window.location.reload()
+	    	})
+	    </script>
+	</body>  
+</html>

@@ -1,0 +1,179 @@
+<div id="yhwtlddb">
+	<div class="yhwtlddb-router">
+		<button ui-sref="homepage.yhwtlddb">返回上一级</button> > <button>**报表</button>
+	</div>
+	<div class="yhwtlddb-top"> 
+		<div>
+			<label>报表名称</label> <input type="text">
+			<input type="button" value="提 交 报 表">
+		</div>
+	</div>
+	<div class="borderr"></div>
+	<div class="yhwtlddb-table">
+		<table id="table-table">
+			<tr>
+				<th colspan="10">重大隐患问题领导挂牌督办清单</th>
+			</tr>
+			<tr>
+				<th>序号</th>
+				<th>所在地区(市,县)</th>
+				<th>企业(单位)名称</th>
+				<th>行业领域</th>
+				<th>重大隐患问题内容</th>
+				<th>整改完成时限</th>
+				<th>挂牌责任人及职务</th>
+				<th>挂牌责任单位</th>
+				<th>备注</th>
+				<th>操作</th>
+			</tr>
+			<tr ng-repeat="item in td track by $index">
+				<td>{{$index+1}}</td>
+				<td><input type="text" ng-model="text1$index"></td>
+				<td><input type="text" ng-model="text2$index"></td>
+				<td><input type="text" ng-model="text3$index"></td>
+				<td><input type="text" ng-model="text4$index"></td>
+				<td><input type="text" ng-model="text5$index"></td>
+				<td><input type="text" ng-model="text6$index"></td>
+				<td><input type="text" ng-model="text7$index"></td>
+				<td><input type="text" ng-model="text8$index"></td>
+				<td><button ng-click="revise($index,text1$index,text2$index,text3$index,text4$index,text5$index,text6$index,text7$index,text8$index)">保存</button><button ng-click="del($index)">删除</button></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td colspan="10">
+					<button ng-click="add()">添加</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="yhwtlddb-foot">
+		<label>审核人</label><input type="text"> <label>填表人</label><input type="text"> <label>填报日期</label><input type="text">
+	</div>
+</div>
+
+<style>
+	#yhwtlddb{
+		width: 100%;
+		height: 100%;
+	}
+	#yhwtlddb .yhwtlddb-router{
+		width: 100%;
+		height: 3%;
+		background: #fff;
+		border-bottom: 1px solid #000;
+	}
+	#yhwtlddb .yhwtlddb-router button{
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+	}
+	#yhwtlddb .yhwtlddb-title{
+		width: 100%;
+		height: 3%;
+		background: #fff;
+		border-bottom: 1px solid #000;
+	}
+	#yhwtlddb .yhwtlddb-title button{
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+	}
+	
+	
+	#yhwtlddb .yhwtlddb-top{
+		width: 95%;
+		margin-left: 2.5%;
+		height: 8%;
+	}
+	#yhwtlddb .yhwtlddb-top div{
+		width: 100%;
+		height: 80%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		text-align: left;
+		position: relative;
+		top: 20%;
+	}
+	#yhwtlddb .yhwtlddb-top div label{
+		font-weight: 600;
+		font-size: 15px;
+	}
+	#yhwtlddb .yhwtlddb-top div input[type=text]{
+		width: 20%;
+		height: 25px;
+	}
+	#yhwtlddb .yhwtlddb-top div input[type=button]{
+		width: 10%;
+		height: 35px;
+		float: right;
+		color: #fff;
+	}
+	#yhwtlddb .yhwtlddb-top div input[value="筛 选"]{
+		background: #6096FA;
+		border: 1px solid #6096FA;
+		margin-right: 1%;
+	}
+	#yhwtlddb .yhwtlddb-top div input[value="提 交 报 表"]{
+		background: #FA7B14;
+		border: 1px solid #FA7B14;
+		margin-right: 1%;
+	}
+	#yhwtlddb .yhwtlddb-top div input[value="导 出 报 表"]{
+		background: #0099FF;
+		border: 1px solid #0099FF;
+	}
+	
+	
+	
+	#yhwtlddb .yhwtlddb-table{
+		width: 95%;
+		margin-left: 2.5%;
+		height: 82%;
+		overflow: auto;
+	}
+	#yhwtlddb .yhwtlddb-table table tr:nth-child(1){
+		background: #A6D3FA;
+	}
+	#yhwtlddb .yhwtlddb-table table tr:nth-child(1) th{
+		text-align: left;
+		padding-left: 10px;
+		color: #FFF;
+	}
+	#yhwtlddb .yhwtlddb-table table tr td {
+		padding: 0;
+		text-align: center;
+	}
+	#yhwtlddb .yhwtlddb-table table tr td:last-child{
+		width: 60px;
+	}
+	#yhwtlddb .yhwtlddb-table table tr td input{
+		width: 100%;
+		height: 100%;
+		border: 1px dotted #9AABC7;
+		background: rgba(255,255,255,0);
+		text-align: center;
+	}
+	#yhwtlddb .yhwtlddb-foot{
+		width: 95%;
+		margin-left: 2.5%;
+		height: 5%;
+		text-align: center;
+	}
+	#yhwtlddb .yhwtlddb-foot label{
+		margin-left: 10%;
+		font-weight: 600;
+		font-size: 15px;
+	}
+	#yhwtlddb .yhwtlddb-foot input{
+		border: 0px;
+		border-bottom: 1px solid #000;
+		text-align: center;
+		height: 95%;
+		background: rgba(255,255,255,0);
+	}
+	
+</style>

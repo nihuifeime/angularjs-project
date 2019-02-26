@@ -1,0 +1,412 @@
+<div id="registemessage">
+	<div class="top">
+		<div class="borderr"></div>
+		<div class="title">
+			<button>创建公司用户名</button>
+			<div id="registemessagemap" style="display: none;"></div>
+		</div>
+		<div class="borderr"></div>
+		
+		<div class="from1">
+			<button class="msee">公 司 信 息</button>
+			<div class="left">
+				<div id="address">
+					<button>公司名称</button><input type="text" ng-model="text1" ng-mouseenter="blurr(text1)"> <span class="icon icon-map-marker" ng-click="address()"  data-toggle="modal" data-target=".bd-example-modal-lg2"></span>
+				</div>
+				<div>
+					<button>统一社会信用代码/注册号</button><input type="text" ng-model="text2">
+				</div>
+				<div>
+					<button>企业行政隶属关系</button><input type="text" ng-model="text3">
+				</div>
+				<div>
+					<button>所属嘎查（村/社区）</button><input type="text" ng-model="text4">
+				</div>
+				<div>
+					<button>旗区级行业主管部门</button><input type="text" ng-model="text5">
+				</div>
+				<div>
+					<button>市级行业主管部门</button><input type="text" ng-model="text6">
+				</div>
+				<div>
+					<button>注册地址</button><input type="text" ng-model="text7">
+				</div>
+				
+				<div>
+					<button>法定代表人</button><input type="text" ng-model="text8">
+				</div>
+				<div>
+					<button>成立日期</button><input type="text" ng-model="text9">
+				</div>
+				<div>
+					<button>注册资金（万元）</button><input type="text" ng-model="text10">
+				</div>
+				<div>
+					<button>固定资产（万元）</button><input type="text" ng-model="text11">
+				</div>
+				<div>
+					<button>年利润（万元）</button><input type="text" ng-model="text12">
+				</div>
+				<div>
+					<button>年产值（万元</button><input type="text" ng-model="text13">
+				</div>
+				<div>
+					<button>单位注册登记类型</button><input type="text" ng-model="text14">
+				</div>
+				<div>
+					<button>企业类型（国民经济行业分类）</button><input type="text" ng-model="text15">
+				</div>
+				<div>
+					<button>监管分类大类</button><input type="text" ng-model="text16">
+				</div>
+				<div>
+					<button>监管分类小类</button><input type="text" ng-model="text17">
+				</div>
+				<div>
+					<button>企业规模</button><input type="text" ng-model="text18">
+				</div>
+				
+				<div>
+					<button>从业人员数量</button><input type="text" ng-model="text18">
+				</div>
+				<div>
+					<button>特种作业人员数量</button><input type="text" ng-model="text18">
+				</div>
+				<div>
+					<button>专职安全生产管理人员数</button><input type="text" ng-model="text18">
+				</div>
+				<div>
+					<button>专职应急管理人员数</button><input type="text" ng-model="text18">
+				</div>
+				<div>
+					<button>注册安全工程师人员数</button><input type="text" ng-model="text18">
+				</div>
+				<div>
+					<button>公司地址</button> <select ng-init="select1 = shen[0]" ng-model="select1">
+						<option ng-repeat="item in shen">{{item}}</option>
+					</select> <select ng-init="select2 = shi[0]" ng-model="select2">
+						<option ng-repeat="item in shi">{{item}}</option>
+					</select> <select ng-init="select3 = xian[0]" ng-model="select3">
+						<option ng-repeat="item in xian">{{item}}</option>
+					</select>
+					<input type="text" placeholder="具体位置" ng-model="text9">
+				</div>
+			</div>
+			<div class="right">
+				
+				<div>
+					<button>营业执照</button>
+					<div id="fileUploadContent" class="fileUploadContent"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="borderr"></div>
+		<hr style="border-color: #000;">
+		<div class="borderr"></div>
+		
+		
+		<div class="from2">
+			<button class="msee">注 册 信 息</button>
+			<div class="left">
+				<div>
+					<button>用户名</button><input type="text" ng-model="text11">
+				</div>
+				<div>
+					<button>密码</button><input type="password" ng-model="text12">
+				</div>
+				<div>
+					<button>确认密码</button><input type="password" ng-model="text13">
+				</div>
+				<div>
+					<button>联系电话</button><input type="text" ng-model="text14">
+				</div>
+				<div>
+					<button>邮政编码</button><input type="text" ng-model="text15">
+				</div>
+				<div>
+					<button>电子邮箱</button><input type="text" ng-model="text16">
+				</div>
+				<div>
+					<button>单位传真</button><input type="text" ng-model="text17">
+				</div>
+			</div>
+			<div class="right">
+				<div>
+					<input type="text" value="hahahahahaahaa">
+				</div>
+				<div>
+					<input type="text" value="hahahahahaahaa">
+				</div>
+				<div>
+					<input type="text" value="hahahahahaahaa">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom">
+		<input type="checkbox" checked="checked" disabled="disabled"> <span>已阅读 <a data-toggle="modal" data-target=".bd-example-modal-lg1">《注册信息管理办法》</a> 并且同意 </span>
+		<br>
+		<br>
+		<button ng-click="testUpload()">确 认 信 息 并 发 送 审 核</button>
+	</div>
+</div>
+
+<div class="modal fade bd-example-modal-lg bd-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+	     <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLongTitle">注册信息管理办法</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+		        <div class="form-group">
+		            1123131313
+			    </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary" data-dismiss="modal">关 闭</button>
+	      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal bd-example-modal-lg bd-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+	     <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLongTitle">注册信息管理办法</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+		      	<div id="r-result">
+			        地址: <input id="suggestId" type="text" style="margin-right:10px;" />
+			        <input type="button" value="搜索" ng-click="theLocation()" /> 经度:
+			        <input type="text" id="lng" /> 纬度：
+			        <input type="text" id="lat" /> <button ng-click="wxmap()">{{maptypename}}</button>
+			    </div>
+		        <div id="allmap" style="width: 100%;height: 500px;">
+		        	
+		        </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary" data-dismiss="modal">关 闭</button>
+	      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+	#dituContent img{
+  max-width: none;
+}
+	#r-result {
+            width: 100%;
+            font-size: 14px;
+            position: absolute;
+            top: 20px;
+            left: 50px;
+            z-index: 99;
+        }
+    #address input{
+    	width: 50% !important;
+    } 
+    #address span{
+    	display: inline-block;
+    	width: 9%;
+    	font-size: 25px;
+    	color: red;
+    }  
+    .tangram-suggestion {
+    	z-index: 9999;
+    	height: 300px;
+    	overflow: auto;
+  	}
+	#registemessage{
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		/*background: red;*/
+	}
+	#registemessage .top{
+		width: 60%;
+		height: 90%;
+		margin-left: 20%;
+		overflow: auto;
+	}
+	#registemessage .top .title{
+		width: 100%;
+		height: 4%;
+		border-bottom: 1px solid #000;
+	}
+	#registemessage .top .title button{
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		font-size: 16px;
+	}
+	#registemessage .top .from1{
+		width: 100%;
+		height: 130%;
+		background: #f7f7f9;
+		border: 1px solid #d4d4d7;
+	}
+	#registemessage .top .from1 .msee{
+		width: 100%;
+		height: 7%;
+		text-align: left;
+		font-size: 15px;
+		margin-top: 1%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-left: 3%;
+	}
+	#registemessage .top .from1 .left{
+		width: 57%;
+		height: 90%;
+		float: left;
+		margin-left: 3%;
+	}
+	#registemessage .top .from1 .left div{
+		height: 3%;
+		margin-top: 1.5%;
+		width: 100%;
+		text-align: center;
+	}
+	
+	#registemessage .top .from1 .left div input{
+		height: 100%;
+		width: 60%;
+		padding-left: 5px;
+		border: 1px solid #d4d4d7;
+	}
+	#registemessage .top .from1 .left div button{
+		height: 100%;
+		width: 40%;
+		text-align: right;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-right: 10px;
+	}
+	#registemessage .top .from1 .left div:last-child select{
+		width: 19%;
+		height: 100%;
+	}
+	#registemessage .top .from1 .left div:last-child input{
+		width: 60%;
+		float: right;
+		margin-top: 5px;
+	}
+	#registemessage .top .from1 .right{
+		width: 40%;
+		height: 90%;
+		float: right;
+	}
+	#registemessage .top .from1 .right button{
+		height: 7%;
+		margin-top: 1.5%;
+		width: 50%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		text-align: left;
+		padding-left: 10px;
+	}
+	
+	
+	
+	
+	#registemessage .top .from2{
+		width: 100%;
+		height: 38%;
+		background: #f7f7f9;
+		border: 1px solid #d4d4d7;
+	}
+	#registemessage .top .from2 .msee{
+		width: 100%;
+		height: 8%;
+		text-align: left;
+		font-size: 15px;
+		margin-top: 1%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-left: 3%;
+	}
+	#registemessage .top .from2 .left{
+		width: 57%;
+		height: 88%;
+		margin-left: 3%;
+		float: left;
+	}
+	#registemessage .top .from2 .left div{
+		height: 10%;
+		margin-top: 1.3%;
+		width: 100%;
+		text-align: center;
+	}
+	#registemessage .top .from2 .left div input{
+		height: 100%;
+		width: 60%;
+		padding-left: 5px;
+		border: 1px solid #d4d4d7;
+	}
+	#registemessage .top .from2 .left div button{
+		height: 100%;
+		width: 40%;
+		text-align: right;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-right: 10px;
+	}
+	
+	#registemessage .top .from2 .right{
+		width: 38%;
+		height: 88%;
+		float: right;
+	}
+	#registemessage .top .from2 .right div{
+		height: 10%;
+		margin-top: 1.5%;
+		width: 100%;
+	}
+	#registemessage .top .from2 .right div input{
+		height: 100%;
+		width: 60%;
+		padding-left: 5px;
+		background: #F7F7F9;
+		border: 1px solid #F7F7F9;
+	}
+	
+	#registemessage .bottom{
+		width: 60%;
+		height: 10%;
+		margin-left: 20%;
+		text-align: center;
+	}
+	#registemessage .bottom span{
+		font-size: 13px;
+		font-weight: 600;
+	}
+	#registemessage .bottom a{
+		color: #0056B3;
+	}
+	#registemessage .bottom button{
+		width: 170px;
+		height: 40px;
+		background: #6096fa;
+		border: 1px solid #6096FA;
+		color: #fff;
+	}
+</style>

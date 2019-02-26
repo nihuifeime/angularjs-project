@@ -1,0 +1,150 @@
+<div id="hometz">
+	<div class="homez-title">
+		<button>
+			****通知
+		</button>
+	</div>
+	<div class="homez-from">
+		<div class="homez-left homez-inc">
+			<div>
+				<button>排查出的隐患问题</button><textarea></textarea>
+			</div>
+			<div>
+				<button>排查时间</button><input type="text" ng-model="text2">
+			</div>
+			<div>
+				<button>隐患类型</button><input type="text" ng-model="text3">
+			</div>
+			<div>
+				<button>整改措施</button><input type="text" ng-model="text4">
+			</div>
+			<div>
+				<button>整改时限</button><input type="text" ng-model="text5">
+			</div>
+			<div>
+				<button>整改资金</button><input type="text" ng-model="text6">
+			</div>
+			<div>
+				<button>整改责任人</button><input type="text" ng-model="text7">
+			</div>
+			<div>
+				<button>防范措施</button><input type="text" ng-model="text8">
+			</div>
+			<div>
+				<button>防范措施责任人</button><input type="text" ng-model="text9">
+			</div>
+			<div>
+				<button>复查时间</button><input type="text" ng-model="text10">
+			</div>
+			<div>
+				<button>复查时间责任人</button><input type="text" ng-model="text11">
+			</div>
+			<div>
+				<button>处理结果</button><input type="text" ng-model="text12">
+			</div>
+		</div>
+		<div class="homez-right homez-inc">
+			<div>
+				<button>备注</button><textarea></textarea>
+			</div>
+		</div>
+	</div>
+	<div class="homez-bottom">
+		<button ui-sref="homepage.home">审查通过</button>
+	</div>
+</div>
+
+<style>
+	#hometz{
+		width: 100%;
+		height: 100%;
+	}
+	#hometz .homez-title{
+		width: 100%;
+		height: 5%;
+	}
+	#hometz .homez-title button{
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0);
+		font-weight: 600;
+		font-size: 25px;
+		outline: none;
+		border: 0px;
+	}
+	#hometz .homez-from{
+		width: 95%;
+		margin-left: 2.5%;
+		height: 80%;
+		border: 1px solid #D4D4D7;
+	}
+	#hometz .homez-from .homez-left{
+		width: 49%;
+		height: 100%;
+		float: left;
+	}
+	#hometz .homez-from .homez-right{
+		width: 49%;
+		height: 100%;
+		float: right;
+	}
+	
+	#hometz .homez-from .homez-inc div{
+		height: 5.5%;
+		margin-top: 2%;
+		width: 100%;
+		text-align: center;
+	}
+	
+	#hometz .homez-from .homez-inc div input{
+		height: 98%;
+		width: 60%;
+		padding-left: 5px;
+		border: 1px solid #d4d4d7;
+	}
+	#hometz .homez-from .homez-inc div button{
+		height: 98%;
+		width: 40%;
+		text-align: right;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-right: 10px;
+		font-size: 14px;
+	}
+	#hometz .homez-from .homez-inc div:first-child{
+		height: 10%;
+	}
+	#hometz .homez-from .homez-inc div:first-child textarea{
+		height: 100%;
+		width: 60%;
+		float: right;
+	}
+	#hometz .homez-from .homez-right div button{
+		width: 10%;
+		text-align: left;
+	}
+	
+	#hometz .homez-from .homez-right div textarea{
+		height: 250% !important;
+		width: 60%;
+		float: right;
+		margin-right: 30%;
+	}
+	
+	#hometz .homez-bottom{
+		width: 100%;
+		width: 95%;
+		margin-left: 2.5%;
+		height: 10%;
+		margin-top: 1%;
+		text-align: center;
+	}
+	#hometz .homez-bottom button{
+		width: 150px;
+		height: 50px;
+		background: orangered;
+		border: 1px solid orangered;
+		color: #FFF;
+	}
+</style>

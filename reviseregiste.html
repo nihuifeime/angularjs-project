@@ -1,0 +1,438 @@
+<div id="reviseregiste">
+	<div class="top">
+		<div class="borderr"></div>
+		<div class="title">
+			<button>修改公司用户名</button>
+		</div>
+		<div class="borderr"></div>
+		
+		<div class="from1">
+			<button class="msee">公 司 信 息</button>
+			<div class="left">
+				<div>
+					<button><span style="color: red">*</span>企业名称</button><input type="text" ng-model="comname">
+				</div>
+				<div>
+					<button><span style="color: red">*</span>社会统一信用代码</button><input type="text" ng-model="comsocialcode" onkeyup="value=value.replace(/[\W]/g,'') "
+onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))">
+				</div>
+				<div>
+					<button>组织机构代码</button><input type="text" ng-model="comcode">
+				</div>
+				<div>
+					<button>工商营业执照号</button><input type="text" ng-model="combusinessnum">
+				</div>
+				<div>
+					<button><span style="color: red">*</span>所属(乡镇街道）</button><input type="text" ng-model="comtostreet" >
+				</div>
+				<div>
+					<button>企业行政隶属关系</button><input type="text" ng-model="comrelation" >
+				</div>
+				
+				<div>
+					<button>所属（村/社区）</button><input type="text" ng-model="comtocommunity" >
+				</div>
+				<div>
+					<button><span style="color: red">*</span>行业主管部门</button><input type="text" ng-model="communicipaldep" >
+				</div>
+				<div>
+					<button>注册地址</button><input type="text" ng-model="comregaddress" >
+				</div>
+				<div>
+					<button><span style="color: red">*</span>所属区域</button> 
+					<select style="width: 16%" ng-init="select1 = shen[0]" ng-model="province">
+						<option value="">请选择</option>
+						<option ng-repeat="item in shen">{{item}}</option>
+					</select> 
+					<select style="width: 16%" ng-init="select2 = shi[0]" ng-model="city">
+						<option value="">请选择</option>
+						<option ng-repeat="item in shi">{{item}}</option>
+					</select> 
+					<select style="width: 16%" ng-model="area">
+						<option value="">请选择</option>
+						<option ng-repeat="item in listqy"  value="{{item.dicname}}">{{item.dicname}}</option>
+					</select>
+				</div>
+				<div>
+					<button><span style="color: red">*</span>经营地址</button><input type="text" ng-model="address" ng-mouseout="blurr(address)">
+				</div>
+				<div>
+					<button><span style="color: red">*</span>法定代表人</button><input type="text" ng-model="comhead" >
+				</div>
+				<div>
+					<button><span style="color: red">*</span>成立日期</button><input type="text" ng-model="comsetupdate" >
+				</div>
+				<div>
+					<button>注册资金（万元）</button><input type="text" ng-model="comregcapital" onkeyup="value=value.replace(/[^\d\.]/g,'')">
+				</div>
+				<div>
+					<button>固定资产（万元））</button><input type="text" ng-model="comfixedassets" onkeyup="value=value.replace(/[^\d\.]/g,'')">
+				</div>
+				<div>
+					<button>年利润（万元）</button><input type="text" ng-model="comannualprofit" onkeyup="value=value.replace(/[^\d\.]/g,'')">
+				</div>
+				<div>
+					<button><span style="color: red">*</span>年产值（万元） </button><input type="text" ng-model="comannualoutput" onkeyup="value=value.replace(/[^\d\.]/g,'')">
+				</div>
+				<div>
+					<button>单位注册登记类型</button><input type="text" ng-model="comunitregtype" >
+				</div>
+				<div>
+					<button>企业类型（国民经济行业分类）</button><input type="text" ng-model="comtypeofenterprise" >
+				</div>
+				<div>
+					<button><span style="color: red">*</span>企业类型</button><!-- <input type="text" ng-model="comtype" > -->
+					<select style="width: 55%" ng-model="comtype">
+						<option value="">请选择</option>
+						<option ng-repeat="item in listhy"  value="{{item.dicname}}">{{item.dicname}}</option>
+					</select>
+				</div>
+				<div>
+					<button><span style="color: red">*</span>监管分类大类</button><input type="text" ng-model="comregclassmax" >
+				</div>
+				<div>
+					<button><span style="color: red">*</span>监管分类小类</button><input type="text" ng-model="comregclassmin" >
+				</div>
+				<div>
+					<button>企业规模</button><input type="text" ng-model="comscale" onkeyup="value=value.replace(/[^\d]/g,'')">
+				</div>
+				<div>
+					<button>从业人员数量</button><input type="text" ng-model="comempnum" onkeyup="value=value.replace(/[^\d]/g,'')">
+				</div>
+				<div>
+					<button>特种作业人员数量</button><input type="text" ng-model="comspecialnum" onkeyup="value=value.replace(/[^\d]/g,'')">
+				</div>
+				<div>
+					<button>专职安全生产管理人员数</button><input type="text" ng-model="comproductionsafety" onkeyup="value=value.replace(/[^\d]/g,'')">
+				</div>
+				<div>
+					<button>专职应急管理人员数</button><input type="text" ng-model="comemergencymanage" onkeyup="value=value.replace(/[^\d]/g,'')">
+				</div>
+				<div>
+					<button>注册安全工程师人员数</button><input type="text" ng-model="comregsafetyengineer" onkeyup="value=value.replace(/[^\d]/g,'')">
+				</div>
+				<div>
+					<button><span style="color: red">*</span>企业位置经度</button><input type="text" ng-model="xvalue" onkeyup="value=value.replace(/[^\d\.]/g,'')">
+				</div>
+				<div>
+					<button><span style="color: red">*</span>企业位置纬度</button><input type="text" ng-model="yvalue" onkeyup="value=value.replace(/[^\d\.]/g,'')">
+				</div>
+				<div>
+					<button>联系电话  </button><input type="text" ng-model="comlinkmanphone" maxlength="11" onkeyup="value=value.replace(/[^\d]/g,'')">
+				</div>
+				<div>
+					<button>邮政编码</button><input type="text" ng-model="comzipcode" >
+				</div>
+				<div>
+					<button>单位传真</button><input type="text" ng-model="comfax" >
+				</div>
+				<div>
+					<button>电子邮箱</button><input type="text" ng-model="comlinkmanemail" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\@\.]/g,'')">
+				</div>
+				<div class="borderr"></div>
+			</div>
+			<div class="right">
+				<div>
+					<button>营业执照</button>
+					<div id="fileUploadContent" class="fileUploadContent"></div>
+				</div>
+				<div>
+					<button>企业区域图</button>
+					<div id="fileUploadContent1" class="fileUploadContent"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="borderr"></div>
+		<hr style="border-color: #000;">
+		<div class="borderr"></div>
+		
+		
+		<div class="from2">
+			<button class="msee">注 册 信 息</button>
+			<div class="left">
+				<div>
+					<button><span style="color: red">*</span>用户名</button><input type="text" ng-model="username" onkeyup="value=value.replace(/[\W]/g,'') ">
+				</div>
+				<div>
+					<button><span style="color: red">*</span>密码</button><input type="password" ng-model="password" onkeyup="value=value.replace(/[\W]/g,'') ">
+				</div>
+				<div>
+					<button><span style="color: red">*</span>真实姓名</button><input type="text" ng-model="realname">
+				</div>
+				<div>
+					<button><span style="color: red">*</span>生日</button><input type="text" ng-model="birthday" >
+				</div>
+				<div>
+					<button><span style="color: red">*</span>身份证号</button><input type="text" ng-model="idcard" onkeyup="value=value.replace(/[\W]/g,'') "
+onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))">
+				</div>
+				<div>
+					<button><span style="color: red">*</span>联系电话</button><input type="text" ng-model="telephone" maxlength="11" onkeyup="value=value.replace(/[^\d]/g,'')">
+				</div>
+				<div>
+					<button>座机号码</button><input type="text" ng-model="linephone" >
+				</div>
+				<div>
+					<button><span style="color: red">*</span>电子邮箱</button><input type="text" ng-model="email" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\@\.]/g,'')">
+				</div>
+				<div>
+					<button>传真号码</button><input type="text" ng-model="fax" >
+				</div>
+				<div class="borderr"></div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom">
+		<input type="checkbox" name="rbox" ng-click="readbox()"> <span>已阅读 <a data-toggle="modal" data-target=".bd-example-modal-lg">《注册信息管理办法》</a> 并且同意 </span>
+		<br>
+		<br>
+		<button id="sid" disabled="disabled" ng-click="testUpload()" ui-sref="login">修 改 完 成 并 发 送 审 核</button>
+		<!-- <button id="sid">确 认 信 息 并 发 送 审 核</button> -->
+	</div>
+	
+	<div id="message">
+		<button>注册失败原因:</button>
+	</div>
+	
+</div>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+	     <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLongTitle">注册信息管理办法</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+		        <div class="form-group">
+		            		温馨提示：如注册时遇到任何问题，请联系区域安监部门。
+			    </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary" data-dismiss="modal">关 闭</button>
+	      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+	#reviseregiste{
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		/*background: red;*/
+	}
+	#reviseregiste #message{
+		width: 15%;
+		height: 30%;
+		position: absolute;
+		top: 35%;
+		left: 2.5%;
+		border: 2px solid red;
+		overflow: auto;
+		animation:background 1s linear 5;
+		border-radius: 5px;
+	}
+	@keyframes background {
+		50%{
+			 border: 2px solid #fff;
+		}
+		100% {
+			 border: 2px solid red;
+		}
+	}
+	#reviseregiste #message button{
+		width: 100%;
+		height: 10%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		text-align: left;
+		padding-left: 10px;
+		border-bottom: 1px solid #d4d4d7;
+		color: red;
+		font-weight: 600;
+	}
+	
+	
+	#reviseregiste .top{
+		width: 60%;
+		height: 90%;
+		margin-left: 20%;
+	}
+	#reviseregiste .top .title{
+		width: 100%;
+		height: 4%;
+		border-bottom: 1px solid #000;
+	}
+	#reviseregiste .top .title button{
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		font-size: 16px;
+	}
+	#reviseregiste .top .from1{
+		overflow: auto;
+		width: 100%;
+		height: 50%;
+		background: #f7f7f9;
+		border: 1px solid #d4d4d7;
+	}
+	#reviseregiste .top .from1 .msee{
+		width: 100%;
+		height: 7%;
+		text-align: left;
+		font-size: 15px;
+		margin-top: 1%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-left: 3%;
+	}
+	#reviseregiste .top .from1 .left{
+		width: 57%;
+		height: 90%;
+		float: left;
+		margin-left: 3%;
+	}
+	#reviseregiste .top .from1 .left div{
+		height: 7%;
+		margin-top: 1.5%;
+		width: 100%;
+		text-align: center;
+	}
+	
+	#reviseregiste .top .from1 .left div input{
+		height: 100%;
+		width: 60%;
+		padding-left: 5px;
+		border: 1px solid #d4d4d7;
+	}
+	#reviseregiste .top .from1 .left div button{
+		height: 100%;
+		width: 40%;
+		text-align: right;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-right: 10px;
+	}
+	#reviseregiste .top .from1 .left div:last-child select{
+		width: 19%;
+		height: 100%;
+	}
+	#reviseregiste .top .from1 .left div:last-child input{
+		width: 60%;
+		float: right;
+		margin-top: 5px;
+	}
+	#reviseregiste .top .from1 .right{
+		width: 40%;
+		height: 90%;
+		float: right;
+	}
+	#reviseregiste .top .from1 .right button{
+		height: 7%;
+		margin-top: 1.5%;
+		width: 50%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		text-align: left;
+		padding-left: 10px;
+	}
+	
+	
+	
+	
+	#reviseregiste .top .from2{
+		overflow: auto;
+		width: 100%;
+		height: 38%;
+		background: #f7f7f9;
+		border: 1px solid #d4d4d7;
+	}
+	#reviseregiste .top .from2 .msee{
+		width: 100%;
+		height: 8%;
+		text-align: left;
+		font-size: 15px;
+		margin-top: 1%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-left: 3%;
+	}
+	#reviseregiste .top .from2 .left{
+		width: 57%;
+		height: 88%;
+		margin-left: 3%;
+		float: left;
+	}
+	#reviseregiste .top .from2 .left div{
+		height: 10%;
+		margin-top: 1.3%;
+		width: 100%;
+		text-align: center;
+	}
+	#reviseregiste .top .from2 .left div input{
+		height: 100%;
+		width: 60%;
+		padding-left: 5px;
+		border: 1px solid #d4d4d7;
+	}
+	#reviseregiste .top .from2 .left div button{
+		height: 100%;
+		width: 40%;
+		text-align: right;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-right: 10px;
+	}
+	
+	#reviseregiste .top .from2 .right{
+		width: 38%;
+		height: 88%;
+		float: right;
+	}
+	#reviseregiste .top .from2 .right div{
+		height: 10%;
+		margin-top: 1.5%;
+		width: 100%;
+	}
+	#reviseregiste .top .from2 .right div input{
+		height: 100%;
+		width: 60%;
+		padding-left: 5px;
+		background: #F7F7F9;
+		border: 1px solid #F7F7F9;
+	}
+	
+	#reviseregiste .bottom{
+		width: 60%;
+		height: 10%;
+		margin-left: 20%;
+		text-align: center;
+	}
+	#reviseregiste .bottom span{
+		font-size: 13px;
+		font-weight: 600;
+	}
+	#reviseregiste .bottom a{
+		color: #0056B3;
+	}
+	#reviseregiste .bottom button{
+		width: 170px;
+		height: 40px;
+		background: #d0d0d0;
+/* 		background: #6096fa; */
+		border: 1px solid #6096FA;
+		color: #fff;
+	}
+</style>

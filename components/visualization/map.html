@@ -1,0 +1,243 @@
+<div id="ksh-map">
+	<div class="ksh-map-title">
+		<button>太 原 市 安 全 生 产 风 险 空 间 分 布 图</button>
+	</div>
+	<div class="ksh-map-serch">
+		<div>
+			<label>选择地区</label> 
+			<select ng-model="select" ng-init="select='太原市'">
+				<option>太原市</option>
+				<option>迎泽区</option>
+				<option>万柏林区</option>
+				<option>小店区</option>
+				<option>尖草坪区</option>
+				<option>杏花岭区</option>
+				<option>晋源区</option>
+				<option>古交市</option>
+				<option>阳曲县</option>
+				<option>娄烦县</option>
+				<option>清徐县</option>
+			</select> 
+			<label>选择行业</label> <select></select> 
+			<label>企业搜索</label> <input type="text"> 
+			<span>*满足任意一条即可生成</span>
+			<input type="button" value="生 成" ng-click="serch()"><button ng-click="printt()">打印</button>
+		</div>
+	</div>
+	<div class="ksh-map-map">
+		<div id="allmap">
+			
+		</div>
+		<div id="allmaptable">
+			<div class="allmaptable-title">
+				<button><span id="dfgh"></span> 风 险 点 详 细 数 据</button> <button class="icon icon-remove" ng-click="close()"></button>
+			</div>
+			<div class="allmaptable-table">
+				<table>
+					<tr>
+						<th>#</th>
+						<th>公司名称</th>
+						<th>所属行业</th>
+						<th>重大风险</th>
+						<th>较大风险</th>
+						<th>一般风险</th>
+						<th>低风险</th>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<button>
+			<span class="icon icon-minus reda"></span><span class="icon icon-minus orangea"></span> <span class="icon icon-minus yellowa"></span><span class="icon icon-minus bluea"></span> <br>
+			<p>说 明:<a class="namea"></a> 区 域 共 排 查 风 险  点 <a class="zonga"></a> 处,其 中 红 色 风 险 <a class="reda"></a> 处,橙 色 风 险<a class="orangea"></a> 处,黄 色 风 险<a class="yellowa"></a> 处,蓝 色 风 险 <a class="bluea"></a> 处</p>
+		</button>
+	</div>
+</div>
+
+<style>
+	#ksh-map{
+		width: 100%;
+		height: 100%;
+	}
+	#ksh-map .ksh-map-title{
+		width: 100%;
+		height: 5%;
+	}
+	#ksh-map .ksh-map-title button{
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		font-size: 20px;
+		font-weight: 600;
+	}
+	#ksh-map .ksh-map-serch{
+		width: 100%;
+		height: 10%;
+	}
+	#ksh-map .ksh-map-serch div{
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		text-align: center;
+		position: relative;
+		top: 15%;
+	}
+	#ksh-map .ksh-map-serch div label{
+		margin-left: 1%;
+		font-size: 15px;
+	}
+	#ksh-map .ksh-map-serch div input,#ksh-map .ksh-map-serch div select{
+		width: 10%;
+		height: 30px;
+	}
+	#ksh-map .ksh-map-serch div span{
+		color: red;
+		margin-left: 3%;
+		margin-right: 3%;
+	}
+	#ksh-map .ksh-map-serch div input[value="生 成"]{
+		background: #6096FA;
+		border: 1px solid #6096FA;
+		color: #fff;
+		height: 40px;
+	}
+	
+	#ksh-map .ksh-map-map{
+		width: 100%;
+		height: 83%;
+	}
+	#ksh-map .ksh-map-map #allmap{
+		width: 95%;
+		margin-left: 2.5%;
+		border: 1px solid #000;
+		height: 85%;
+	}
+	#ksh-map .ksh-map-map #allmaptable{
+		width: 95%;
+		margin-left: 2.5%;
+		border: 1px solid #000;
+		height: 85%;
+		background: #fff;
+		box-shadow: 0px 0px 5px 2px #aaa;
+		border-radius: 5px;
+		display: none;
+	}
+	#ksh-map .ksh-map-map #allmaptable .allmaptable-title{
+		width: 100%;
+		height: 5%;
+	}
+	#ksh-map .ksh-map-map #allmaptable .allmaptable-title {
+		width: 100%;
+		height: 5%;
+	}
+	#ksh-map .ksh-map-map #allmaptable .allmaptable-title button:nth-child(1){
+		width: 50%;
+		height: 100%;	
+		background: rgba(255,255,255,0);
+		outline: none;
+		border: 0px;
+		font-size: 13px;
+		font-weight: 600;
+		text-align: left;
+	}
+	#ksh-map .ksh-map-map #allmaptable .allmaptable-title button:nth-child(1) span{
+		color: red;
+	}
+	#ksh-map .ksh-map-map #allmaptable .allmaptable-title button:nth-child(2){
+		width: 20px;
+		height: 100%;	
+		background: rgba(255,255,255,0);
+		outline: none;
+		border: 0px;
+		font-size: 13px;
+		font-weight: 600;
+		float: right;
+		margin-right: 5px;
+	}
+	#ksh-map .ksh-map-map #allmaptable .allmaptable-table{
+		width: 100%;
+		height: 93%;
+		overflow: auto;
+	}
+	#ksh-map .ksh-map-map button{
+		width: 100%;
+		height: 13%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+	}
+	#ksh-map .ksh-map-map button span{
+		font-size: 16px;
+		margin-left: 5%;
+	}
+	#ksh-map .ksh-map-map button span:nth-child(1){
+		color: red;
+	}
+	#ksh-map .ksh-map-map button span:nth-child(2){
+		color: orange;
+	}
+	#ksh-map .ksh-map-map button span:nth-child(3){
+		color: gold;
+	}
+	#ksh-map .ksh-map-map button span:nth-child(4){
+		color: blue;
+	}
+	#ksh-map .ksh-map-map button p{
+		color: red;
+		font-size: 16px;
+		margin-top: 20px;
+	}
+	p{
+		margin: 0px 0px 5px;
+	}
+	p span{
+		float: right;
+		margin-right: 10px;
+	}
+	.anchorBL{
+	 	display: none !important;
+	 }
+</style>
+
+<!--<style type="text/css" media=print>  
+    .ksh-map-serch{display : none }  
+</style>-->
+
+<script>
+	var xonn=[
+		{x:112.556396,y:37.87699,name:"太 原 市",class:"one",red:12,orange:15,blue:60,yellow:80},
+	]
+	var xonnn=[
+//		{x:112.556396,y:37.87699,name:"太 原 市",class:"one",red:12,orange:15,blue:60,yellow:80},
+		{x:112.576383,y:37.900185,name:"杏 花 岭 区",class:"two",red:36,orange:45,blue:30,yellow:180},
+		{x:112.572395,y:37.742324,name:"小 店  区",class:"three",red:46,orange:150,blue:90,yellow:120},
+		{x:112.493604,y:37.945942,name:"尖 草 坪 区",class:"three",red:46,orange:150,blue:90,yellow:120},
+		{x:112.569385,y:37.869534,name:"迎 泽 区",class:"three",red:46,orange:150,blue:90,yellow:120},
+		{x:112.522575,y:37.864976,name:"万 柏 林  区",class:"three",red:46,orange:150,blue:90,yellow:120},
+		{x:112.484567,y:37.721169,name:"晋 源  区",class:"three",red:46,orange:150,blue:90,yellow:120},
+		{x:112.364554,y:37.613066,name:"清 徐 县",class:"three",red:46,orange:150,blue:90,yellow:120},
+		{x:112.182449,y:37.913001,name:"古 交 市",class:"three",red:46,orange:150,blue:90,yellow:120},
+		{x:112.67941,y:38.064621,name:"阳 曲 县",class:"three",red:46,orange:150,blue:90,yellow:120},
+		{x:111.803589,y:38.073196,name:"娄 烦 县",class:"three",red:46,orange:150,blue:90,yellow:120},
+//		
+		
+	]
+	var map = new BMap.Map("allmap",{minZoom:9,maxZoom:20});
+	var point = new BMap.Point(112.45,37.90);
+//	map.centerAndZoom(point,10);
+	map.centerAndZoom("太原市",10);
+	map.enableScrollWheelZoom(true);
+	var bdary = new BMap.Boundary();
+</script>

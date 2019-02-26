@@ -1,0 +1,135 @@
+<div id="f-ybsjchird">
+	<div class="f-ybsjchird-top" ng-if="userr==0">
+		<button ui-sref="homepage.fxdzl-ybsj">待办数据</button> > <button>**公司</button>
+	</div>
+	<div class="f-ybsjchird-top" ng-if="userr==1">
+		<button>**公司</button>
+	</div>
+	<div class="borderr"></div>
+	<div class="f-ybsjchird-table">
+		<table>
+			<tr>
+				<th colspan="9">已 办 数 据 危 险 源 记 录</th>
+			</tr>
+			<tr>
+				<th></th>
+				<th>危险源名称</th>
+				<th>地址</th>
+				<th>坐标</th>
+				<th>时间</th>
+				<th>风险级别</th>
+				<th>类别</th>
+				<th>备注</th>
+				<th>操作</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td ng-if="userr==0"><button>上传</button><button data-toggle="modal" data-target=".bd-example-modal-lg">查看</button><button ui-sref="homepage.fxdzl-ybsj.ybsjchird.ybsjchirdchird">整改表</button></td>
+				<td ng-if="userr==1"><button>上传</button><button data-toggle="modal" data-target=".bd-example-modal-lg">查看</button><button ui-sref="homepage.ybsjchird.ybsjchirdchird">整改表</button></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      	<div class="modal-header" style="background: #9AABC7;">
+        	<h3 class="modal-title" id="exampleModalLongTitle" style="color: #fff;font-weight: 600;">资 料 查 看</h3>
+        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          		<span aria-hidden="true">&times;</span>
+       	 	</button>
+      	</div>
+      	<div class="modal-body">
+      		<div class="form-group">
+	            
+		    </div>
+      	</div>
+      	<div class="modal-footer">
+        	<button type="button" class="btn btn-primary" data-dismiss="modal">关 闭</button>
+      	</div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+	#f-ybsjchird{
+		width: 100%;
+		height: 100%;
+	}
+	#f-ybsjchird .f-ybsjchird-top{
+		width: 100%;
+		height: 3%;
+		background: #fff;
+		border-bottom: 1px solid #000;
+	}
+	#f-ybsjchird .f-ybsjchird-top button{
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+	}
+	#f-ybsjchird .f-ybsjchird-table{
+		width: 95%;
+		margin-left: 2.5%;
+		height: 87%;
+		overflow: auto;
+	}
+	#f-ybsjchird .f-ybsjchird-table table tr td:last-child button{
+		width: 30%;
+	}
+	#f-ybsjchird .f-ybsjchird-table table tr td:last-child button:nth-child(3){
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		color: red;
+		outline: none;
+	}
+	#f-ybsjchird .f-ybsjchird-bottom{
+		width: 100%;
+		height: 8%;
+	}
+	#f-ybsjchird .f-ybsjchird-bottom div{
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		text-align: center;
+		position: relative;
+		top: 20%;
+	}
+	#f-ybsjchird .f-ybsjchird-bottom div input{
+		width: 150px;
+		height: 40px;
+		color: #fff;
+	}
+	#f-ybsjchird .f-ybsjchird-bottom div input[value="审 核 危 险 源"]{
+		background: #FB7A12;
+		border: 1px solid #FB7A12;
+	}
+	#f-ybsjchird .f-ybsjchird-bottom div input[value="添 加 危 险 源"]{
+		background: #6096FA;
+		border: 1px solid #6096FA;
+	}
+	#f-ybsjchird .f-ybsjchird-bottom div input[value="导 入 危 险 源"]{
+		background: #6096FA;
+		border: 1px solid #6096FA;
+	}
+	#f-ybsjchird .f-ybsjchird-table table tr:nth-child(1){
+		background: #A6D3FA;
+	}
+	#f-ybsjchird .f-ybsjchird-table table tr:nth-child(1) th{
+		text-align: left;
+		padding-left: 10px;
+		color: #FFF;
+	}
+</style>

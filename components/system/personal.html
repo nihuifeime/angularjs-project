@@ -1,0 +1,78 @@
+<div id="personal">
+	<div class="personal-top">
+		<button class="msee">个人注册信息</button>
+		<div class="from">
+			<div><button>真是姓名</button><input type="text" ng-disabled="isdisabled"></div>
+			<div><button>性别</button><input type="text" ng-disabled="isdisabled"></div>
+			<div><button>电子邮箱</button><input type="text" ng-disabled="isdisabled"></div>
+			<div><button>手机号码</button><input type="text" ng-disabled="isdisabled"></div>
+		</div>
+	</div>
+	<div class="peronal-bottom">
+		<button ng-click="personal()">{{personalbtn}}</button>
+	</div>
+</div>
+
+<style>
+	#personal{
+		width: 100%;
+		height: 100%;
+	}
+	#personal .personal-top{
+		width: 100%;
+		height: 90%;
+	}
+	#personal .personal-top .msee{
+		width: 100%;
+		height: 7%;
+		text-align: left;
+		font-size: 15px;
+		margin-top: 1%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-left: 10%;
+	}
+	#personal .personal-top .from{
+		width: 40%;
+		height: 100%;
+		margin-left: 30%;
+	}
+	#personal .personal-top .from div{
+		height: 5%;
+		margin-top: 1.5%;
+		width: 100%;
+		/*text-align: center;*/
+	}
+	
+	#personal .personal-top .from div input{
+		height: 100%;
+		width: 40%;
+		padding-left: 5px;
+		border: 1px solid #d4d4d7;
+	}
+	#personal .personal-top .from div button{
+		height: 100%;
+		width: 30%;
+		text-align: right;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-right: 10px;
+	}
+	
+	
+	
+	#personal .peronal-bottom{
+		width: 100%;
+		height: 10%;
+		text-align: center;
+	}
+	#personal .peronal-bottom button{
+		width: 180px;
+		height: 40px;
+		background: #6096FA;
+		border: 1px solid #6096FA;
+		color: #fff;
+	}
+</style>

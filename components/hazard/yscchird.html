@@ -1,0 +1,193 @@
+<div id="yscchird">
+	<div class="yscchird-top">
+		<button ui-sref="homepage.wx-ysc">危险源信息管理</button> > <button>**公司</button>
+	</div>
+	<div class="borderr"></div>
+	<div class="yscchird-table">
+		<table>
+			<tr>
+				<th colspan="9">危 险 源 记 录</th>
+			</tr>
+			<tr>
+				<th><input type="checkbox"></th>
+				<th>危险源名称</th>
+				<th>地址</th>
+				<th>坐标</th>
+				<th>时间</th>
+				<th>风险级别</th>
+				<th>类别</th>
+				<th>备注</th>
+				<th>操作</th>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><button>上传</button><button data-toggle="modal" data-target=".bd-example-modal-lg">查看</button></td>
+			</tr>
+		</table>
+	</div>
+	<div class="yscchird-bottom">
+		<div>
+			<input type="button" value="审 核 危 险 源" ui-sref="homepage.wx-ysc.wx-yscchirdchird">
+			<input type="button" value="添 加 危 险 源"  data-toggle="modal" data-target="#exampleModaladd" data-whatever="@mdo">
+			<input type="button" value="导 入 危 险 源">
+		</div>
+	</div>
+</div>
+
+
+<div id="yscchirdmap" style="display: none;">
+	
+</div>
+
+<div class="modal fade" id="exampleModaladd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background: #9AABC7;color: #fff;">
+        <h5 class="modal-title" id="exampleModalLongTitle">材料查看</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+	        <div class="form-group">
+	            <button>危险源名称</button> <input type="text">
+		    </div>
+		    <div class="form-group">
+	            <button>地址</button> <input type="text">
+		    </div>
+		    <div class="form-group">
+	            <button>坐标</button> <input type="text">
+		    </div>
+		    <div class="form-group">
+	            <button>时间</button> <input type="text">
+		    </div>
+		    <div class="form-group">
+	            <button>风险等级</button> <select></select>
+		    </div>
+		    <div class="form-group">
+	            <button>类别</button> <select></select>
+		    </div>
+		    <div class="form-group">
+	            <button>备注</button> <textarea></textarea>
+		    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">添 加 完 成</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      	<div class="modal-header" style="background: #9AABC7;">
+        	<h3 class="modal-title" id="exampleModalLongTitle" style="color: #fff;font-weight: 600;">资 料 查 看</h3>
+        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          		<span aria-hidden="true">&times;</span>
+       	 	</button>
+      	</div>
+      	<div class="modal-body">
+      		<div class="form-group">
+	            
+		    </div>
+      	</div>
+      	<div class="modal-footer">
+        	<button type="button" class="btn btn-primary" data-dismiss="modal">关 闭</button>
+      	</div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+	#yscchird{
+		width: 100%;
+		height: 100%;
+	}
+	#yscchird .yscchird-top{
+		width: 100%;
+		height: 3%;
+		background: #fff;
+		border-bottom: 1px solid #000;
+	}
+	#yscchird .yscchird-top button{
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+	}
+	#yscchird .yscchird-table{
+		width: 95%;
+		margin-left: 2.5%;
+		height: 87%;
+		overflow: auto;
+	}
+	
+	#yscchird .yscchird-bottom{
+		width: 100%;
+		height: 8%;
+	}
+	#yscchird .yscchird-bottom div{
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		text-align: center;
+		position: relative;
+		top: 20%;
+	}
+	#yscchird .yscchird-bottom div input{
+		width: 150px;
+		height: 40px;
+		color: #fff;
+	}
+	#yscchird .yscchird-bottom div input[value="审 核 危 险 源"]{
+		background: #FB7A12;
+		border: 1px solid #FB7A12;
+	}
+	#yscchird .yscchird-bottom div input[value="添 加 危 险 源"]{
+		background: #6096FA;
+		border: 1px solid #6096FA;
+	}
+	#yscchird .yscchird-bottom div input[value="导 入 危 险 源"]{
+		background: #6096FA;
+		border: 1px solid #6096FA;
+	}
+	#yscchird .yscchird-table table tr:nth-child(1){
+		background: #A6D3FA;
+	}
+	#yscchird .yscchird-table table tr:nth-child(1) th{
+		text-align: left;
+		padding-left: 10px;
+		color: #FFF;
+	}
+	
+	.modal-body .form-group button{
+		width: 30%;
+		height: 30px;
+		text-align: right;
+		float: left;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-right: 10px;
+	}
+	.modal-body .form-group input,.modal-body .form-group select{
+		width: 60%;
+		height: 30px;
+	}
+	.modal-body .form-group textarea{
+		width: 60%;
+		height: 150px;
+	}
+</style>

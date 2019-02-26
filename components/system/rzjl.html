@@ -1,0 +1,84 @@
+<div id="rzjl">
+	<div class="rzjl-top">
+		<div>
+			<label>开始时间</label> <input type="text" id="date01"> 
+			<label>结束时间</label> <input type="text" id="date02"> 
+			<label>操作类型</label> <select></select> 
+			<label>搜索全部</label> <input type="text">
+			<span>*满足任意一条即可生成</span>
+			<input type="button" value="筛选" ng-click="serch()">
+		</div>
+	</div>
+	<div class="rzjl-bottom">
+		<table>
+			<tr>
+				<th colspan="7">日志记录</th>
+			</tr>
+			<tr>
+				<th ng-repeat="item in th">{{item}}</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<style>
+	#rzjl{
+		width: 100%;
+		height: 100%;
+	}
+	#rzjl .rzjl-top{
+		width: 95%;
+		height: 10%;
+		margin-left: 2.5%;
+	}
+	#rzjl .rzjl-top div{
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		position: relative;
+		top: 20%;
+		text-align: center;
+	}
+	#rzjl .rzjl-top div label{
+		margin-left: 1%;
+		font-size: 15px;
+	}
+	#rzjl .rzjl-top div input,#rzjl .rzjl-top div select{
+		width: 10%;
+		height: 30px;
+	}
+	#rzjl .rzjl-top div span{
+		color: red;
+		margin-left: 3%;
+		margin-right: 3%;
+	}
+	#rzjl .rzjl-top div input:last-child{
+		background: #6096FA;
+		border: 1px solid #6096FA;
+		color: #fff;
+		height: 40px;
+	}
+	#rzjl .rzjl-bottom{
+		width: 95%;
+		height: 88%;
+		margin-left: 2.5%;
+		overflow: auto;
+	}
+	#rzjl .rzjl-bottom table tr:nth-child(1){
+		background: #A6D3FA;
+	}
+	#rzjl .rzjl-bottom table tr:nth-child(1) th{
+		color: #fff !important;
+		text-align: left;		
+	}
+</style>

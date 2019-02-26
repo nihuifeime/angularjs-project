@@ -1,0 +1,147 @@
+<div id="homepageview">
+	<div class="homepageview-title">
+		
+	</div>
+	<div class="homepage-bottom public">
+		<div class="left">
+			<div class="subNavBox">
+				<span ng-repeat="item in navs">
+					<div ng-if="item.router!='' ">
+						<div class="subNav"><button ui-sref-active="active" ui-sref="{{item.router}}" class="active" ng-click="head(item,$index)" ng-class="{fcred:$index==fcli}">{{item.id}}</button></div>
+						<ul class="navContent">
+			            	<li ng-repeat="itemli in item.navli" ui-sref-active="active" ui-sref="{{itemli.router}}" class="active">{{itemli.li}}</li>
+			            </ul>
+					</div>
+					<div ng-if="item.router=='' ">
+						<div class="subNav"><button ng-click="head(item,$index)" ng-class="{fcred:$index==fcli}">{{item.id}}</button></div>
+						 <ul class="navContent">
+			            	<li ng-repeat="itemli in item.navli" ui-sref-active="active" ui-sref="{{itemli.router}}" class="active">{{itemli.li}}</li>
+			            </ul>
+					</div>
+					
+				</span>
+	        </div>
+		</div>
+		<div ui-view="right" class="right">
+		
+		</div>
+	</div>
+</div>
+
+<!--<style type="text/css" media=print>  
+    .homepageview-title{display : none }   
+    .left{display : none }  
+</style>-->
+
+<style>
+	#homepageview{
+		width: 100%;
+		height: 100%;
+	}
+	#homepageview .homepageview-title{
+		width: 100%;
+		height: 5%;
+		background: #9AABC7;
+	}
+	#homepageview .homepage-bottom{
+		width: 100%;
+		height: 93%;
+		margin-top: 0.5%;
+	}
+	#homepageview .homepage-bottom .left{
+		width: 13%;
+		height: 100%;
+		background: #F7F7F9;
+		float: left;
+		overflow: auto;
+	}
+	#homepageview .homepage-bottom .right{
+		width: 86%;
+		height: 100%;
+		float: right;
+		margin-right: 0.5%;
+		background: #F7F7F9;
+		/*overflow: auto;*/
+	}
+	
+	
+	
+.public .left .subNavBox{width:100%;}
+.public .left .subNav{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	border-bottom:solid 1px #e5e3da;
+	cursor:pointer;
+	text-align: center;
+}
+/*.public .left .subNav button:first-child{
+	width: 37%;
+	height: 100%;
+	background: rgba(255,255,255,0);
+	border: 0px;
+	float: left;
+	outline: none;
+}
+.public .left .subNav button:last-child{
+	width: 63%;
+	height: 100%;
+	background: rgba(255,255,255,0);
+	border: 0px;
+	float: right;
+	text-align: left;
+	outline: none;
+	font-size: 16px;
+}*/
+.public .left .subNav button{
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0);
+	border: 0px;
+	float: right;
+	outline: none;
+	font-size: 16px;
+}
+.public .left .navContent:first{
+	display: block;
+}
+.public .left .navContent{
+	width: 100%;
+	display: none;
+	/*border-bottom:solid 1px #e5e3da;*/
+	background: #f4f4f4;
+	margin: 0 !important;
+	padding: 0 !important;
+	font-size: 15px;
+	background: #EEEEEE;
+}
+.public .left span:nth-child(1) .navContent{
+	display: block;
+}
+.public .left .navContent:hover{
+	cursor: pointer;
+}
+.public .left .navContent li{
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	list-style: none;
+	/*border-bottom: 1px solid #fff;*/
+}
+.public .left .navContent li:last-child{
+	border-bottom: 0px;
+}
+.public .left .navContent .active{
+  	color:#f1f1f1;
+  	background: #9AABC7;
+}
+.hehe{
+	border: 0px;
+}	
+
+.fcred{
+	color: #fff;
+	background: #102041 !important;
+}
+</style>

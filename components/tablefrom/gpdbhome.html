@@ -1,0 +1,106 @@
+<div id="gpdbhome">
+	<div class="gpdbhome-top"> 
+		<div>
+			<label>搜 索</label> <input type="text">
+			<input type="button" value="新建报表" ui-sref="homepage.gpdbzdyh.gpdbchird">
+			<input type="button" value="筛 选" ng-click="serch()">
+		</div>
+	</div>
+	<div class="borderr"></div>
+	<div class="gpdbhome-table">
+		<table id="table-table">
+			<tr>
+				<th colspan="10">挂牌督办重大隐患问题情况表列表</th>
+			</tr>
+			<tr>
+				<th>报表名称</th>
+				<th>创建人</th>
+				<th>所在机构</th>
+				<th>创建时间</th>
+				<th>操作</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><button ui-sref="homepage.gpdbzdyh.gpdbchirdchird">查看报表</button><button>删除</button></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<style>
+	#gpdbhome{
+		width: 100%;
+		height: 100%;
+	}
+	#gpdbhome .gpdbhome-title{
+		width: 100%;
+		height: 3%;
+		background: #fff;
+		border-bottom: 1px solid #000;
+	}
+	#gpdbhome .gpdbhome-title button{
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+	}
+	
+	
+	#gpdbhome .gpdbhome-top{
+		width: 95%;
+		margin-left: 2.5%;
+		height: 8%;
+	}
+	#gpdbhome .gpdbhome-top div{
+		width: 100%;
+		height: 80%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		text-align: left;
+		position: relative;
+		top: 20%;
+	}
+	#gpdbhome .gpdbhome-top div label{
+		font-weight: 600;
+		font-size: 15px;
+	}
+	#gpdbhome .gpdbhome-top div input[type=text]{
+		width: 20%;
+		height: 25px;
+	}
+	#gpdbhome .gpdbhome-top div input[type=button]{
+		width: 10%;
+		height: 33px;
+		float: right;
+		color: #fff;
+	}
+	#gpdbhome .gpdbhome-top div input[value="筛 选"]{
+		background: #6096FA;
+		border: 1px solid #6096FA;
+		margin-right: 1%;
+	}
+	#gpdbhome .gpdbhome-top div input[value="新建报表"]{
+		background: orangered;
+		border: 1px solid orangered;
+		margin-right: 1%;
+	}
+	#gpdbhome .gpdbhome-table{
+		width: 95%;
+		margin-left: 2.5%;
+		height: 85%;
+		overflow: auto;
+	}
+	#gpdbhome .gpdbhome-table table tr:nth-child(1){
+		background: #A6D3FA;
+	}
+	#gpdbhome .gpdbhome-table table tr:nth-child(1) th{
+		text-align: left;
+		padding-left: 10px;
+		color: #FFF;
+	}
+	
+</style>

@@ -1,0 +1,100 @@
+<div id="wx-ybsj">
+	<div class="wx-ybsj-top">
+		<div>
+			<label>选择地区</label> 
+			<select ng-model="select">
+				<option>请选择</option>
+				<option>太原市</option>
+				<option>迎泽区</option>
+				<option>小店区</option>
+			</select> 
+			<label>企业类型</label> <select></select> 
+			<label>企业搜索</label> <input type="text"> 
+			<span>*满足任意一条即可生成</span>
+			<input type="button" value="筛 选" ng-click="serch()">
+		</div>
+	</div>
+	<div class="wx-ybsj-bottom">
+		<table>
+			<tr>
+				<th colspan="8">已 办 企 业 信 息 管 理</th>
+			</tr>
+			<tr>
+				<th>#</th>
+				<th>公司名称</th>
+				<th>所属行业</th>
+				<th>重大风险</th>
+				<th>较大风险</th>
+				<th>一般风险</th>
+				<th>低风险</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<style>
+	#wx-ybsj{
+		width: 100%;
+		height: 100%;
+	}
+	#wx-ybsj .wx-ybsj-top{
+	width: 100%;
+	height: 8%;
+	}
+	
+	#wx-ybsj .wx-ybsj-top div{
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		position: relative;
+		text-align: center;
+		top: 20%;
+	}
+	#wx-ybsj .wx-ybsj-top div label{
+		margin-left: 1%;
+		font-size: 15px;
+	}
+	#wx-ybsj .wx-ybsj-top div input,#wx-ybsj .wx-ybsj-top div select{
+		width: 10%;
+		height: 30px;
+	}
+	#wx-ybsj .wx-ybsj-top div span{
+		color: red;
+		margin-left: 3%;
+		margin-right: 3%;
+	}
+	#wx-ybsj .wx-ybsj-top div input[value="筛 选"]{
+		background: #6096FA;
+		border: 1px solid #6096FA;
+		color: #fff;
+		height: 40px;
+	}
+	#wx-ybsj .wx-ybsj-bottom{
+		width: 95%;
+		margin-left: 2.5%;
+		height: 90%;
+		overflow: auto;
+	}
+	
+	
+	#wx-ybsj .wx-ybsj-bottom table tr:nth-child(1){
+		background: #A6D3FA;
+	}
+	#wx-ybsj .wx-ybsj-bottom table tr:nth-child(1) th{
+		text-align: left;
+		padding-left: 10px;
+		color: #FFF;
+	}
+	
+</style>

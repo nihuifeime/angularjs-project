@@ -1,0 +1,210 @@
+<div id="qy-yzc">
+	<div class="qy-yzc-top">
+		<div>
+			<label>选择地区</label> 
+			<select ng-model="select">
+				<option>请选择</option>
+				<option>太原市</option>
+				<option>迎泽区</option>
+				<option>小店区</option>
+			</select> 
+			<label>企业类型</label> <select></select> 
+			<label>企业搜索</label> <input type="text"> 
+			<span>*满足任意一条即可生成</span>
+			<input type="button" value="筛 选" ng-click="serch()">
+		</div>
+	</div>
+	<div class="qy-yzc-bottom">
+		<table>
+			<tr>
+				<th colspan="8">已 注 册 企 业 信 息 管 理</th>
+			</tr>
+			<tr>
+				<th>#</th>
+				<th>公司名称</th>
+				<th>所属行业</th>
+				<th>用户名</th>
+				<th>手机号</th>
+				<th>电子邮箱</th>
+				<th>状态</th>
+				<th>操作</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><button data-toggle="modal" data-target=".bd-example-modal-lg">分配责任人</button><button ui-sref="homepage.qy-yzc.qy-yzcchird">查看详情</button></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      	<div class="modal-header" style="background: #9AABC7;">
+        	<h3 class="modal-title" id="exampleModalLongTitle" style="color: #fff;font-weight: 600;">分 配 责 任 人</h3>
+        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          		<span aria-hidden="true">&times;</span>
+       	 	</button>
+      	</div>
+      	<div class="modal-body">
+      		<div class="form-group">
+	             <table>
+					<tr>
+						<th colspan="2">生产经营单位名称</th>
+						<th colspan="4"><input type="text"></th>
+					</tr>
+					<tr>
+						<th>主要负责人</th>
+						<td><input type="text"></td>
+						<th>分管负责人</th>
+						<td><input type="text"></td>
+						<th>具体责任人</th>
+						<td><input type="text"></td>
+					</tr>
+					
+					<tr>
+						<th>##</th>
+						<th>部门(政府)名称</th>
+						<th>主要负责人/分管负责人</th>
+						<th>责任处室(属地部门)</th>
+						<th>处室负责人</th>
+						<th>具体责任人</th>
+					</tr>
+					
+					<tr>
+						<th>行业监管部门</th>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+					</tr>
+					
+					<tr>
+						<th rowspan="4">重点专业监管部门</th>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+					</tr>
+					<tr>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+					</tr>
+					<tr>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+					</tr>
+					<tr>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+					</tr>
+					
+					
+					<tr>
+						<th>属地政府</th>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text" placeholder="责任部门"></td>
+						<td><input type="text" placeholder="部门负责人"></td>
+						<td><input type="text"></td>
+					</tr>
+					
+	            </table>
+		    </div>
+      	</div>
+      	<div class="modal-footer">
+        	<button type="button" class="btn btn-primary" data-dismiss="modal">完 成</button>
+      	</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<style>
+	#qy-yzc{
+		width: 100%;
+		height: 100%;
+	}
+	#qy-yzc .qy-yzc-top{
+	width: 100%;
+	height: 8%;
+	}
+	
+	#qy-yzc .qy-yzc-top div{
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		text-align: center;
+		position: relative;
+		top: 20%;
+	}
+	#qy-yzc .qy-yzc-top div label{
+		margin-left: 1%;
+		font-size: 15px;
+	}
+	#qy-yzc .qy-yzc-top div input,#qy-yzc .qy-yzc-top div select{
+		width: 10%;
+		height: 30px;
+	}
+	#qy-yzc .qy-yzc-top div span{
+		color: red;
+		margin-left: 3%;
+		margin-right: 3%;
+	}
+	#qy-yzc .qy-yzc-top div input[value="筛 选"]{
+		background: #6096FA;
+		border: 1px solid #6096FA;
+		color: #fff;
+		height: 40px;
+	}
+	#qy-yzc .qy-yzc-bottom{
+		width: 95%;
+		margin-left: 2.5%;
+		height: 90%;
+		overflow: auto;
+	}
+	
+	
+	#qy-yzc .qy-yzc-bottom table tr:nth-child(1){
+		background: #A6D3FA;
+	}
+	#qy-yzc .qy-yzc-bottom table tr:nth-child(1) th{
+		text-align: left;
+		padding-left: 10px;
+		color: #FFF;
+	}
+	.modal-body .form-group input{
+		width: 100%;
+		height: 100%;
+		border: 0px;
+		text-align: center;
+	}
+	.modal-body .form-group table tr td:nth-child(2) {
+	    text-align: center !important;
+	}
+	.modal-body .form-group table tr td,.modal-body .form-group table tr th{
+	   	padding: 0;
+	}
+</style>

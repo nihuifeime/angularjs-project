@@ -1,0 +1,253 @@
+<div id="dbsjchirdchird">
+	<div class="dbsjchirdchird-top">
+		<button ui-sref="homepage.wx-dbsj">危险源信息管理</button> > <button ui-sref="homepage.wx-dbsj.wx-dbsjchird">**公司</button> > <button>危险源审核</button>
+	</div>
+	<div class="borderr"></div>
+	<div class="dbsjchirdchird-table">
+		<button class="tabletitle">
+			危 险 源 审 核 通 知 表
+		</button>
+		<div class="from">
+			<button>公司信息</button>
+			<div class="from-left">
+				<div><button>公司名称</button><input type="text"></div>
+				<div><button>企业所属行业</button><input type="text"></div>
+				<div><button>联络员姓名</button><input type="text"></div>
+				<div><button>联络员手机号码</button><input type="text"></div>
+				<div><button>联络员邮箱</button><input type="text"></div>
+			</div>
+			<div class="from-right">
+				<div><button>联络员传真</button><input type="text"></div>
+				<div><button>公司地址</button><input type="text"></div>
+				<div><button>注册号</button><input type="text"></div>
+				<div><button>法定代表人姓名</button><input type="text"></div>
+			</div>
+		</div>
+		<div class="borderr"></div>
+		<div class="table">
+			<table>
+				<tr>
+					<th colspan="8">审 核 列 表</th>
+				</tr>
+				<tr>
+					<th>#</th>
+					<th>危险源名称</th>
+					<th>地址</th>
+					<th>坐标</th>
+					<th>时间</th>
+					<th>风险级别</th>
+					<th>类别</th>
+					<th>备注</th>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		<div class="borderr"></div>
+		<div class="textaera">
+			<div class="lefttextaera">
+				<textarea placeholder="安全局化学化工办公室意见及审核建议"></textarea>
+				<div><label>发起时间</label><input type="text"> <label>整改负责人</label><input type="text"></div>
+			</div>
+			<div class="righttextaera">
+				<textarea placeholder="安全危险源管理办公室意见及审核建议"></textarea>
+				<div><label>发起时间</label><input type="text"> <label>整改负责人</label><input type="text"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+	#dbsjchirdchird{
+		width: 100%;
+		height: 100%;
+	}
+	#dbsjchirdchird .dbsjchirdchird-top{
+		width: 100%;
+		height: 3%;
+		background: #fff;
+		border-bottom: 1px solid #000;
+	}
+	#dbsjchirdchird .dbsjchirdchird-top button{
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+	}
+	#dbsjchirdchird .dbsjchirdchird-table{
+		width: 95%;
+		margin-left: 2.5%;
+		height: 95%;
+		overflow: auto;
+	}
+	#dbsjchirdchird .dbsjchirdchird-table button{
+		width: 100%;
+		height: 5%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		font-weight: 600;
+		font-size: 20px;
+	}
+	
+	#dbsjchirdchird .dbsjchirdchird-table .from{
+		width: 100%;
+		height: 30%;
+		background: #fff;
+		border-radius: 5px;
+	}
+	#dbsjchirdchird .dbsjchirdchird-table .from button{
+		width: 100%;
+		height: 10%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		text-align: left;
+		padding-left: 5%;
+		font-weight: 500;
+		font-size: 14px;
+	}
+	#dbsjchirdchird .dbsjchirdchird-table .from .from-left{
+		width: 50%;
+		height: 90%;
+		float: left;
+	}
+	
+	#dbsjchirdchird .dbsjchirdchird-table .from .from-left div{
+		height: 13%;
+		margin-top: 1.5%;
+		width: 100%;
+		text-align: center;
+	}
+	
+	#dbsjchirdchird .dbsjchirdchird-table .from .from-left div input{
+		height: 100%;
+		width: 60%;
+		padding-left: 5px;
+		border: 1px solid #d4d4d7;
+	}
+	#dbsjchirdchird .dbsjchirdchird-table .from .from-left div button{
+		height: 100%;
+		width: 30%;
+		text-align: right;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-right: 10px;
+	}
+	
+	#dbsjchirdchird .dbsjchirdchird-table .from .from-right{
+		width: 50%;
+		height: 90%;
+		float: right;
+	}
+	#dbsjchirdchird .dbsjchirdchird-table .from .from-right div{
+		height: 13%;
+		margin-top: 1.5%;
+		width: 100%;
+		text-align: center;
+	}
+	
+	#dbsjchirdchird .dbsjchirdchird-table .from .from-right div input{
+		height: 100%;
+		width: 60%;
+		padding-left: 5px;
+		border: 1px solid #d4d4d7;
+	}
+	#dbsjchirdchird .dbsjchirdchird-table .from .from-right div button{
+		height: 100%;
+		width: 30%;
+		text-align: right;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-right: 10px;
+	}
+	
+	#dbsjchirdchird .dbsjchirdchird-table .table{
+		width: 100%;
+		height: 30%;
+		background: #fff;
+		border-radius: 5px;
+		overflow: auto;
+	}
+	#dbsjchirdchird .dbsjchirdchird-table .table table tr:nth-child(1){
+		background: #A6D3FA;
+	}
+	#dbsjchirdchird .dbsjchirdchird-table .table table tr:nth-child(1) th{
+		text-align: left;
+		padding-left: 10px;
+		color: #FFF;
+	}
+	
+	#dbsjchirdchird .dbsjchirdchird-table .textaera{
+		width: 100%;
+		height: 31%;
+		background: #fff;
+		border-radius: 5px;
+	}
+	#dbsjchirdchird .dbsjchirdchird-table .textaera .lefttextaera{
+		width: 50%;
+		height: 100%;
+		float: left;
+	}
+	#dbsjchirdchird .dbsjchirdchird-table .textaera .lefttextaera textarea{
+		width: 98%;
+		height: 85%;
+		font-size: 15px;
+		font-weight: 600;
+	}
+	#dbsjchirdchird .dbsjchirdchird-table .textaera .lefttextaera div{
+		width: 100%;
+		height: 10%;
+		text-align: center;
+	}
+	#dbsjchirdchird .dbsjchirdchird-table .textaera .lefttextaera div input{
+		border: 0px;
+		border-bottom: 1px solid #000;
+		text-align: center;
+		height: 25px;
+	}
+	#dbsjchirdchird .dbsjchirdchird-table .textaera .righttextaera{
+		width: 50%;
+		height: 100%;
+		float: right;
+	}
+	#dbsjchirdchird .dbsjchirdchird-table .textaera .righttextaera textarea{
+		width: 95%;
+		height: 85%;
+		font-size: 15px;
+		font-weight: 600;
+	}
+	#dbsjchirdchird .dbsjchirdchird-table .textaera .righttextaera div{
+		width: 100%;
+		height: 10%;
+		text-align: center;
+	}
+	#dbsjchirdchird .dbsjchirdchird-table .textaera .righttextaera div input{
+		border: 0px;
+		border-bottom: 1px solid #000;
+		text-align: center;
+		height: 25px;
+	}
+	
+	
+	
+	
+	/*#dbsjchirdchird .dbsjchirdchird-table table tr:nth-child(1){
+		background: #A6D3FA;
+	}
+	#dbsjchirdchird .dbsjchirdchird-table table tr:nth-child(1) th{
+		text-align: left;
+		padding-left: 10px;
+		color: #FFF;
+	}*/
+</style>

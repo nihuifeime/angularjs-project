@@ -1,0 +1,171 @@
+<div id="ksh-pcfx">
+	<div class="ksh-pcfx-top">
+		<div class="top-left">
+			<div class="pcfx-title">
+				<button>风 险 点 总 计 </button>
+			</div>
+			<div class="left-bar">
+				<div id="redfx">
+					
+				</div>
+				<div id="orangefx">
+					
+				</div>
+				<div id="yellowfx">
+					
+				</div>
+				<div id="bluefx">
+					
+				</div>
+			</div>
+		</div>
+		<div class="top-right">
+			<div class="pcfx-title">
+				<button>隐 患 总 计 </button>
+			</div>
+			<div class="right-yhtj">
+				<div class="div">
+					<span class="icon icon-exclamation-sign"></span>
+					<p>重大隐患()</p>
+				</div>
+				<div class="div">
+					<span class="icon icon-exclamation-sign"></span>
+					<p>一般隐患()</p>
+				</div>
+				<div class="div">
+					<div class="right-bar" id="right-bar">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ksh-pcfx-center">
+		<div class="pcfx-title">
+			<button>今 日 排 查 </button>
+		</div>
+		<table>
+				<tr>
+					<th></th>
+					<th>重大风险</th>
+					<th>较大风险</th>
+					<th>一般风险</th>
+					<th>普通风险</th>
+				</tr>
+				<tr>
+					<td>已完成</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>未完成</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+	</div>
+	
+	<div class="ksh-pcfx-bottom">
+		<div class="pcfx-title">
+			<button>7 日 内 排 查 完 成 率 </button>
+		</div>
+		<div class="bottom-zzt" id="bottom-zzt">
+			
+		</div>
+	</div>
+	
+</div>
+
+<style>
+	#ksh-pcfx{
+		width: 100%;
+		height: 100%;
+	}
+	.pcfx-title{
+		width: 100%;
+		height: 10%;
+	}
+	.pcfx-title button{
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0);
+		outline: none;
+		border: 0px;
+		font-weight: 600;
+	}
+	#ksh-pcfx .ksh-pcfx-top{
+		width: 100%;
+		height: 30%;
+	}
+	#ksh-pcfx .ksh-pcfx-top .top-left{
+		width: 50%;
+		height: 100%;
+		float: left;
+	}
+	#ksh-pcfx .ksh-pcfx-top .top-left .left-bar{
+		width: 100%;
+		height: 90%;
+	}
+	#ksh-pcfx .ksh-pcfx-top .top-left .left-bar div{
+		width: 25%;
+		height: 100%;
+		float: left;
+	}
+	#ksh-pcfx .ksh-pcfx-top .top-right{
+		width: 50%;
+		height: 100%;
+		float: right;
+	}
+	#ksh-pcfx .ksh-pcfx-top .top-right .right-yhtj{
+		width: 100%;
+		height: 90%;
+	}
+	#ksh-pcfx .ksh-pcfx-top .top-right .right-yhtj .div{
+		width: 32%;	
+		height: 100%;
+		float: left;
+		margin-left: 1%;
+		text-align: center;
+		padding: 30px 0 0 0 ;
+	}
+	#ksh-pcfx .ksh-pcfx-top .top-right .right-yhtj .div:last-child{
+		padding: 0 0 0 0 ;
+	}
+	#ksh-pcfx .ksh-pcfx-top .top-right .right-yhtj .div:nth-child(1) span{
+		color: red;
+	}
+	#ksh-pcfx .ksh-pcfx-top .top-right .right-yhtj .div:nth-child(2) span{
+		color: orange;
+	}
+	#ksh-pcfx .ksh-pcfx-top .top-right .right-yhtj .div span{
+		font-size: 120px;
+		display: inline-block;
+	}
+	#ksh-pcfx .ksh-pcfx-top .top-right .right-yhtj .div p{
+		width: 100%;
+		height: 20%;
+		text-align: center;
+		font-size: 15px;
+	}
+	#ksh-pcfx .ksh-pcfx-top .top-right .right-yhtj .div .right-bar{
+		width: 100%;
+		height: 100%;
+	}
+	#ksh-pcfx .ksh-pcfx-center{
+		width: 100%;
+		height: 20%;
+	}
+	
+	#ksh-pcfx .ksh-pcfx-bottom{
+		width: 100%;
+		height: 50%;
+	}
+	#ksh-pcfx .ksh-pcfx-bottom .bottom-zzt{
+		width: 100%;
+		height: 90%;
+	}
+</style>

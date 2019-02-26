@@ -1,0 +1,105 @@
+<div id="gnglcheck">
+	<div class="gnglcheck-top">
+		<button ui-sref="homepage.qx-gngl">功 能 管 理</button> > <button>修 改 功 能</button>
+	</div>
+	<div class="gnglcheck-bottom">
+		<div class="gnglcheck-bottom-from">
+			<button class="gnglcheck-bottom-title">
+				功能 信 息
+			</button>
+			<div class="from-from">
+				<div><button>角色名称</button><input type="text" ng-disabled="isdisabled"></div>
+			</div>
+			<div class="from-btn">
+				<button ng-click="gnglcheck()">修改</button> <button>删 除</button>
+			</div>
+		</div>
+	</div>
+</div>
+<style>
+	#gnglcheck{
+		width: 100%;
+		height: 100%;
+	}
+	#gnglcheck .gnglcheck-top{
+		width: 100%;
+		height: 3%;
+		background: #fff;
+		border-bottom: 1px solid #000;
+	}
+	#gnglcheck .gnglcheck-top button{
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+	}
+	#gnglcheck .gnglcheck-bottom{
+		width: 100%;
+		height: 95%;
+	}
+	#gnglcheck .gnglcheck-bottom .gnglcheck-bottom-from{
+		width: 95%;
+		height: 95%;
+		margin-left: 2.5%;
+		border-radius: 5px;
+	}
+	#gnglcheck .gnglcheck-bottom .gnglcheck-bottom-from .gnglcheck-bottom-title{
+		width: 100%;
+		height: 10%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		font-size: 15px;
+		text-align: left;
+		padding-left: 10%;
+	}
+	#gnglcheck .gnglcheck-bottom .gnglcheck-bottom-from .from-from{
+		width: 100%;
+		height: 82%;
+	}
+	#gnglcheck .gnglcheck-bottom .gnglcheck-bottom-from .from-from div{
+		width: 100%;
+		height: 7%;
+	}
+	#gnglcheck .gnglcheck-bottom .gnglcheck-bottom-from .from-from div button{
+		width: 30%;
+		height: 35px;
+		text-align: right;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		padding-right: 20px;
+		float: left;
+	}
+	#gnglcheck .gnglcheck-bottom .gnglcheck-bottom-from .from-from div input{
+		width: 40%;
+		height: 35px;
+	}
+	#gnglcheck .gnglcheck-bottom .gnglcheck-bottom-from .from-from div textarea{
+		width: 40%;
+		height: 250px;
+		border: 1px solid #d4d4d7;
+		float: right;
+		margin-right: 30%;
+		background: #fff;
+	}
+	#gnglcheck .gnglcheck-bottom .gnglcheck-bottom-from .from-btn{
+		width: 100%;
+		height: 8%;
+		text-align: center;
+	}
+	#gnglcheck .gnglcheck-bottom .gnglcheck-bottom-from .from-btn button{
+		width: 180px;
+		height: 35px;
+		color: #fff;
+		margin-left: 2%;
+	}
+	#gnglcheck .gnglcheck-bottom .gnglcheck-bottom-from .from-btn button:nth-child(1){
+		background: #6096FA;
+		border: 1px solid #6096FA;
+	}
+	#gnglcheck .gnglcheck-bottom .gnglcheck-bottom-from .from-btn button:nth-child(2){
+		background: #F8113C;
+		border: 1px solid #F8113C;
+	}
+</style>

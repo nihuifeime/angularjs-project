@@ -1,0 +1,53 @@
+ <div id="login">
+ 	<div class="login-title">
+ 		<button><img src="img/logo.png"> {{Project}} <br><span>{{english}}</span></button>
+ 	</div>
+ 	<div class="login-dl">
+ 		<div class="dl-dl">
+ 			<input type="text" placeholder="请输入用户名" ng-model="usernamee">
+ 			<input type="password" placeholder="请输入密码">
+ 			<input type="text" disabled="disabled" ng-model="error">
+		    <!--<button ui-sref="homepage" class="login">
+		          	登 录
+		    </button>-->
+		    <button class="login" ng-click="login()">
+		          	登 录
+		    </button>
+		    <button ui-sref="registe" class="registe">
+		          	注 册
+		    </button>
+ 		</div>
+ 	</div>
+ 	<div class="login-foot">
+ 		<button>{{information}}</button>
+ 	</div>
+ 	<div class="appmm" ng-show="show">
+ 		<img src="img/appb.png">
+ 	</div>
+ 	<button class="appbtn" ng-mouseenter="show = true" ng-mouseleave="show = false">扫描二维码下载APP</button>
+</div>
+<style>
+	.appbtn{
+		position: absolute;
+		top: 90%;
+		left:5%;
+		width: 10%;
+		height: 40px;
+		background: rgba(255,255,255,0);
+		border: 1px solid #6096FA;
+		/*background-image: url(img/logo.png);*/
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		color: #6096FA;
+		font-weight: 600;
+	}
+	.appmm{
+		position: absolute;
+		top: 60%;
+		left:2.5%;
+		width: 15%;
+	}
+	.appmm img{
+		width: 100%;
+	}
+</style>
