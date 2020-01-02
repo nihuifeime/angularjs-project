@@ -16,11 +16,11 @@ myApp.controller('login',function($scope,$http,$state){
 	} 
 	
 	$scope.login=function(){
-		if($scope.usernamee==1){
-			$state.go('homepage')
-		}else if($scope.usernamee==2){
-			$state.go('reviseregiste')
-		}
+//		if($scope.usernamee==1){
+			$state.go('homepage',{name:$scope.username})
+//		}else if($scope.usernamee==2){
+//			$state.go('reviseregiste')
+//		}
 	}
 	
 })
@@ -235,8 +235,9 @@ myApp.controller('registesuccess',function($scope,$http,$state){//注册成功
 
 
 
-myApp.controller('homepage',function($scope,$http,$state){
+myApp.controller('homepage',function($scope,$http,$state,$stateParams){
 	$scope.Project="安 全 风 险 隐 患 双 重 预 防 平 台"
+	console.log($stateParams.name)
 })
 
 var user=1
@@ -358,6 +359,12 @@ myApp.controller('homepageview',function($scope,$http,$state){//侧边导航
 	  			{li:"推进情况统计表",router:".tjqktjb"},
 	  			{li:"安全生产报表清单",router:".aqscbbqd"},
 	  			{li:"太原市重大危险源统计明细表",router:".zdwxytjmxbhome"},
+	  			{li:"安全生产重点风险点一览表",router:".ylb"},
+	  			{li:"安全体检",router:".aqtj"},
+	  			{li:"安全生产专项整治",router:".aqsczxzz"},
+	  			{li:"重大风险情况",router:".zdfxqk"},
+	  			{li:"未整改重大安全隐患",router:".wzgzdaqyh"},
+	  			{li:"集中检查风险隐患",router:".jzjcfxyh"},
 		  	],
 		  	router:""
 		},
@@ -1857,3 +1864,54 @@ myApp.controller('scdjcjzbchird',function($scope,$http,$state){//生产大检查
 	$("input[type='number']").attr("disabled","disabled")
 })
 
+myApp.controller('ylb',function($scope,$http,$state){//生产大检查进展表
+	$scope.td=[];
+	var tdtd={
+		
+	}
+	$scope.add=function(){
+		$scope.td.push(tdtd)
+		console.log($scope.td)
+	}
+	$scope.del=function(index){
+		$scope.td.splice(index,1);
+		console.log($scope.td)
+	}
+})
+myApp.controller('aqtj',function($scope,$http,$state){//生产大检查进展表
+	
+})
+myApp.controller('aqsczxzz',function($scope,$http,$state){//生产大检查进展表
+	
+})
+myApp.controller('zdfxqk',function($scope,$http,$state){//生产大检查进展表
+	$scope.td=[];
+	var tdtd={
+		
+	}
+	$scope.add=function(){
+		$scope.td.push(tdtd)
+		console.log($scope.td)
+	}
+	$scope.del=function(index){
+		$scope.td.splice(index,1);
+		console.log($scope.td)
+	}
+})
+myApp.controller('wzgzdaqyh',function($scope,$http,$state){//生产大检查进展表
+	$scope.td=[];
+	var tdtd={
+		
+	}
+	$scope.add=function(){
+		$scope.td.push(tdtd)
+		console.log($scope.td)
+	}
+	$scope.del=function(index){
+		$scope.td.splice(index,1);
+		console.log($scope.td)
+	}
+})
+myApp.controller('jzjcfxyh',function($scope,$http,$state){//生产大检查进展表
+	
+})

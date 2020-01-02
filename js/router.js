@@ -48,6 +48,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider){
 	
 	.state('homepage', {
 		 url: '/homepage',
+		  params:{name:""},
 	    views: {
 	        '': {
 	            templateUrl: 'homepage.html',
@@ -1234,6 +1235,68 @@ myApp.config(function ($stateProvider, $urlRouterProvider){
             'right@homepage': {
                 templateUrl: 'components/tablefrom/scdjcjzbchird.html',
                 controller: 'scdjcjzbchird'
+            }
+           
+        }
+    })
+	
+	
+	.state('homepage.ylb', {
+        url: '/ylb',
+        views: {
+            'right@homepage': {
+                templateUrl: 'components/tablefrom/ylb.html',
+                controller: 'ylb'
+            }
+           
+        }
+    })
+	.state('homepage.aqtj', {
+        url: 'aqtj',
+        views: {
+            'right@homepage': {
+                templateUrl: 'components/tablefrom/aqtj.html',
+                controller: 'aqtj'
+            }
+           
+        }
+    })
+	.state('homepage.aqsczxzz', {
+        url: 'aqsczxzz',
+        views: {
+            'right@homepage': {
+                templateUrl: 'components/tablefrom/aqsczxzz.html',
+                controller: 'aqsczxzz'
+            }
+           
+        }
+    })
+	.state('homepage.zdfxqk', {
+        url: 'zdfxqk',
+        views: {
+            'right@homepage': {
+                templateUrl: 'components/tablefrom/zdfxqk.html',
+                controller: 'zdfxqk'
+            }
+           
+        }
+    })
+	.state('homepage.wzgzdaqyh', {
+        url: 'wzgzdaqyh',
+        views: {
+            'right@homepage': {
+                templateUrl: 'components/tablefrom/wzgzdaqyh.html',
+                controller: 'wzgzdaqyh'
+            }
+           
+        }
+    })
+	.state('homepage.jzjcfxyh', {
+        url: 'jzjcfxyh',
+        views: {
+            'right@homepage': {
+                templateUrl: 'components/tablefrom/jzjcfxyh.html',
+                controller: 'jzjcfxyh'
             }
            
         }

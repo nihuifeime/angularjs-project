@@ -1,0 +1,185 @@
+<div id="aqtj">
+	<div class="aqtj-top"> 
+		<div>
+			<label>报表名称</label> <input type="text">
+			<input type="button" value="提 交 报 表">
+		</div>
+	</div>
+	<div class="borderr"></div>
+	<div class="aqtj-table">
+		<table id="table-table">
+			<tr>
+				<th colspan="13">全市安全"体检"工作进展情况统计表</th>
+			</tr>
+			<tr>
+				<th rowspan="2">安全体检企业数量(家)</th>
+				<th colspan="3">一般隐患</th>
+				<th colspan="3">重大隐患</th>
+				<th colspan="5">执法处罚情况 </th>
+				<th rowspan="2">重大隐患挂牌督办</th>
+			</tr>
+			<tr>
+				<th>排查(项)</th>
+				<th>已整改(项)</th>
+				<th>未整改(项)</th>
+				<th>排查(项)</th>
+				<th>已整改(项)</th>
+				<th>未整改(项)</th>
+				<th>责令限期整改(家)</th>
+				<th>停产整顿(家)</th>
+				<th>行政处罚	(万元) </th>
+				<th>暂扣吊销证照(个)</th>
+				<th>关闭取缔(家)</th>
+			</tr>
+			<tr>
+				<td><input type="text" ng-model="text1$index"></td>
+				<td><input type="text" ng-model="text1$index"></td>
+				<td><input type="text" ng-model="text1$index"></td>
+				<td><input type="text" ng-model="text1$index"></td>
+				<td><input type="text" ng-model="text1$index"></td>
+				<td><input type="text" ng-model="text1$index"></td>
+				<td><input type="text" ng-model="text1$index"></td>
+				<td><input type="text" ng-model="text1$index"></td>
+				<td><input type="text" ng-model="text1$index"></td>
+				<td><input type="text" ng-model="text1$index"></td>
+				<td><input type="text" ng-model="text1$index"></td>
+				<td><input type="text" ng-model="text1$index"></td>
+				<td><input type="text" ng-model="text1$index"></td>
+			</tr>
+			<tr style="height: 30%;">
+				<td>重大隐患明细</td>
+				<td colspan="12"></td>
+			</tr>
+		</table>
+	</div>
+	<div class="aqtj-foot">
+		<label>审核人</label><input type="text"> <label>填表人</label><input type="text"> <label>填报日期</label><input type="text">
+	</div>
+</div>
+
+<style>
+	#aqtj{
+		width: 100%;
+		height: 100%;
+	}
+	#aqtj .aqtj-router{
+		width: 100%;
+		height: 3%;
+		background: #fff;
+		border-bottom: 1px solid #000;
+	}
+	#aqtj .aqtj-router button{
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+	}
+	
+	#aqtj .aqtj-title{
+		width: 100%;
+		height: 3%;
+		background: #fff;
+		border-bottom: 1px solid #000;
+	}
+	#aqtj .aqtj-title button{
+		height: 100%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+	}
+	
+	
+	#aqtj .aqtj-top{
+		width: 95%;
+		margin-left: 2.5%;
+		height: 8%;
+	}
+	#aqtj .aqtj-top div{
+		width: 100%;
+		height: 80%;
+		background: rgba(255,255,255,0);
+		border: 0px;
+		outline: none;
+		text-align: left;
+		position: relative;
+		top: 20%;
+	}
+	#aqtj .aqtj-top div label{
+		font-weight: 600;
+		font-size: 15px;
+	}
+	#aqtj .aqtj-top div input[type=text]{
+		width: 20%;
+		height: 25px;
+	}
+	#aqtj .aqtj-top div input[type=button]{
+		width: 10%;
+		height: 35px;
+		float: right;
+		color: #fff;
+	}
+	#aqtj .aqtj-top div input[value="筛 选"]{
+		background: #6096FA;
+		border: 1px solid #6096FA;
+		margin-right: 1%;
+	}
+	#aqtj .aqtj-top div input[value="提 交 报 表"]{
+		background: #FA7B14;
+		border: 1px solid #FA7B14;
+		margin-right: 1%;
+	}
+	#aqtj .aqtj-top div input[value="导 出 报 表"]{
+		background: #0099FF;
+		border: 1px solid #0099FF;
+	}
+	
+	
+	
+	#aqtj .aqtj-table{
+		width: 95%;
+		margin-left: 2.5%;
+		height: 82%;
+		overflow: auto;
+	}
+	#aqtj .aqtj-table table tr:nth-child(1){
+		background: #A6D3FA;
+	}
+	#aqtj .aqtj-table table tr:nth-child(1) th{
+		text-align: left;
+		padding-left: 10px;
+		color: #FFF;
+	}
+	#aqtj .aqtj-table table tr td {
+		padding: 0;
+		text-align: center;
+	}
+	#aqtj .aqtj-table table tr td:last-child{
+		width: 60px;
+	}
+	#aqtj .aqtj-table table tr td input{
+		width: 100%;
+		height: 100%;
+		border: 1px dotted #9AABC7;
+		background: rgba(255,255,255,0);
+		text-align: center;
+	}
+	#aqtj .aqtj-foot{
+		width: 95%;
+		margin-left: 2.5%;
+		height: 5%;
+		text-align: center;
+	}
+	#aqtj .aqtj-foot label{
+		margin-left: 10%;
+		font-weight: 600;
+		font-size: 15px;
+	}
+	#aqtj .aqtj-foot input{
+		border: 0px;
+		border-bottom: 1px solid #000;
+		text-align: center;
+		height: 95%;
+		background: rgba(255,255,255,0);
+	}
+	
+</style>
